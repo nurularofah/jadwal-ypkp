@@ -9,9 +9,6 @@ class Jadwal extends CI_Controller {
 
 	public function index()
 	{
-		if (!file_exists('application/views/depan/beranda.php')) {
-			show_404();
-		}
 		$this->load->view('depan/beranda');
 	}
 
