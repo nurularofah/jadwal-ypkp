@@ -9,14 +9,14 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-default" role="navigation">
+	<nav class="navbar navbar-inverse" role="navigation">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">	      
 	      <a class="navbar-brand" href="#">UNIVERSITAS SANGGA BUANA</a>	 	      
 	    </div><!-- /.navbar-collapse -->
 	    <ul class="nav navbar-nav navbar-right nav-pills">
-	      	<li><p class="navbar-text "><?php echo date('D, d-M-Y'); ?></p></li>	            
+	      	<li><p class="navbar-text "><?php echo date('l, d-M-Y'); ?></p></li>	            
 	    </ul>  
 	  </div><!-- /.container-fluid -->
 	</nav>
@@ -30,7 +30,7 @@
 	  <div class="table-responsive">
 	  	<table class="table table-hover table-bordered">	  	
 	  	<thead>
-	  		<tr class="success">
+	  		<tr class="info">
 	  			<th>Mata Kuliah</th>
 	  			<th>Kelas</th>
 	  			<th>Waktu</th>
@@ -48,10 +48,102 @@
 	  			<td>data</td>
 	  			<td>data</td>
 	  		</tr>
+	  		<tr>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  		</tr>
+	  		<tr>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  		</tr>
+	  		<tr>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  		</tr>
+	  		<tr>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  			<td>data</td>
+	  		</tr>
 	  	</tbody>
 	  </table>
 	  </div>	  	 
 	</div>
 
+	<div class="row">
+		<div class="col-md-6">
+			<div id="nurul-slide" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#nurul-slide" data-slide-to="0" class="active"></li>
+			    <li data-target="#nurul-slide" data-slide-to="1"></li>
+			    <li data-target="#nurul-slide" data-slide-to="2"></li>
+			    <li data-target="#nurul-slide" data-slide-to="3"></li>
+			  </ol>
+
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner">
+			    <div class="item active">
+			      <img src="images/slide-1.jpg" alt="Gambar 1">	      
+			      <div class="carousel-caption">
+			        <h3>Gambar 1</h3>
+			      </div>	      
+			    </div>
+			    <div class="item">
+			      <img src="images/slide-2.jpg" alt="Gambar 2">	      
+			      <div class="carousel-caption">
+			        <h3>Gambar 2</h3>
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img src="images/slide-3.jpg" alt="Gambar 3">	      
+			      <div class="carousel-caption">
+			        <h3>Gambar 3</h3>
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img src="images/slide-4.jpg" alt="Gambar 4">	      
+			      <div class="carousel-caption">
+			        <h3>Gambar 4</h3>
+			      </div>
+			    </div>	    	    
+			  </div>
+
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#nurul-slide" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left"></span>
+			  </a>
+			  <a class="right carousel-control" href="#nurul-slide" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right"></span>
+			  </a>
+			</div>
+		</div>
+ 		<div class="col-md-4">Berita</div>
+	</div><br>
+
+	
+
+
+	<!-- Running Text -->
+	<div class="alert alert-success">
+		<marquee direction="right">
+			Nurul Arofah
+		</marquee>
+	</div>
 </body>
 </html>
