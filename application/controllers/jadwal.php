@@ -11,7 +11,7 @@ class Jadwal extends CI_Controller {
 	{
 		$this->load->view('depan/beranda');
 	}
-
+ 
 }
 
 /* End of file jadwal.php */
