@@ -137,8 +137,6 @@
 	</div><br>
 
 	
-
-
 	<!-- Running Text -->
 	<div class="alert alert-success">
 		<marquee direction="right">
