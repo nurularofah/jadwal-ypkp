@@ -84,7 +84,7 @@
 	  </table>
 	  </div>	  	 
 	</div>
-
+ 
 	<div class="row">
 		<div class="col-md-6">
 			<div id="nurul-slide" class="carousel slide" data-ride="carousel">
