@@ -21,70 +21,83 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 
-	<div class="panel panel-primary">
-	  <!-- Default panel contents -->
-	  <div class="panel-heading">
-	  	<center><b>JADWAL PERKULIAHAN</b></center>
-	  </div>
-	  <!-- Table -->
-	  <div class="table-responsive">
-	  	<table class="table table-hover table-bordered">	  	
-	  	<thead>
-	  		<tr class="info">
-	  			<th>Mata Kuliah</th>
-	  			<th>Kelas</th>
-	  			<th>Waktu</th>
-	  			<th>Ruangan</th>
-	  			<th>Dosen</th>
-	  			<th>Status Dosen</th>
-	  		</tr>
-	  	</thead>
-	  	<tbody>
-	  		<tr>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  		</tr>
-	  		<tr>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  		</tr>
-	  		<tr>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  		</tr>
-	  		<tr>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  		</tr>
-	  		<tr>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  			<td>data</td>
-	  		</tr>
-	  	</tbody>
-	  </table>
-	  </div>	  	 
+
+
+
+
+	<!-- Table -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class=".col-md-8">
+				<div class="panel panel-primary">
+				  <!-- Default panel contents -->
+				  <div class="panel-heading">
+				  	<center><b>JADWAL PERKULIAHAN</b></center>
+				  </div>
+				  <div class="table-responsive">
+				  	<table class="table table-hover table-bordered">	  	
+				  	<thead>
+				  		<tr class="info">
+				  			<th>Mata Kuliah</th>
+				  			<th>Kelas</th>
+				  			<th>Waktu</th>
+				  			<th>Ruangan</th>
+				  			<th>Dosen</th>
+				  			<th>Status Dosen</th>
+				  		</tr>
+				  	</thead>
+				  	<tbody>
+				  		<tr>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  		</tr>
+				  		<tr>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  		</tr>
+				  		<tr>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  		</tr>
+				  		<tr>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  		</tr>
+				  		<tr>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  			<td>data</td>
+				  		</tr>
+				  	</tbody>
+				  </table>
+				  </div>	  	 
+				</div>	
+			</div>
+		</div>		
 	</div>
- 
+
+
+
+	<!-- Berita dan Slide -->
 	<div class="row">
 		<div class="col-md-6">
 			<div id="nurul-slide" class="carousel slide" data-ride="carousel">
