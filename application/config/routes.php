@@ -37,7 +37,7 @@
 | in the URL cannot be matched to a valid route.
 |
 */
-$route['(:any)'] = "pengaturan/$1";
+$route['(:any)'] = "admin/$1";
 $route['default_controller'] = "jadwal";
 $route['404_override'] = '';
 
