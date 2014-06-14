@@ -9,7 +9,22 @@ class Admin extends CI_Controller {
 
 	public function pengaturan()
 	{
-		$data['maincontent'] = 'belakang/dashboard';
+		$data['maincontent'] = 'belakang/form/dashboard';
+		$data['title'] = 'Dashboard';
+		$this->load->view('belakang/template',$data);
+	}
+
+	public function dosen()
+	{
+		$data['maincontent'] = 'belakang/form/dosen';
+		$data['title'] = 'Dosen';
+		$this->load->view('belakang/template',$data);
+	}
+
+	public function matakuliah()
+	{
+		$data['maincontent'] = 'belakang/form/matakuliah';
+		$data['title'] = 'Matakuliah';
 		$this->load->view('belakang/template',$data);
 	}
 
