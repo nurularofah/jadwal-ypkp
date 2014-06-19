@@ -4,7 +4,7 @@
     </div>
     <div class="panel-body">
     	<div class="table-responsive">
-		    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+		    <table class="table table-striped table-bordered table-hover display" id="example" cellspacing="0" width="100%">
 		        <thead>
 		            <tr>
 		                <th>Rendering engine</th>
