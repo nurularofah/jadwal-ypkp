@@ -18,7 +18,6 @@
     <script src="<?php echo base_url().'assets/js/plugins/dataTables/dataTables.bootstrap.js'; ?>"></script>
     
     <script>
-
     $(document).ready(function() {
         $('#example').dataTable();
         var table = $('#example').DataTable();

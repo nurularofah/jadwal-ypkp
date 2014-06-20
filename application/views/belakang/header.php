@@ -14,6 +14,7 @@
     
     <!-- Page-Level Plugin CSS - Tables -->
     <link href="<?php echo base_url().'assets/css/plugins/dataTables/dataTables.bootstrap.css'?>" rel="stylesheet">
+    <link href="<?php echo base_url().'assets/css/bootstrap-datetimepicker.css'?>" rel="stylesheet">
 
     <!-- SB Admin CSS - Include with every page -->
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/sb-admin.css'; ?>">
