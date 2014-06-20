@@ -14,7 +14,7 @@
 		        <h4 class="modal-title" id="myModalLabel">Tambah Data Dosen</h4>
 		      </div>
 		      <div class="modal-body">
-		      	<form action="" method="get" accept-charset="utf-8">
+		      	<form action="" method="get" role="form">
 		      		<div class="input-group">
 					  <label>Nama</label>
 					  <input type="text" class="form-control">					  
@@ -433,15 +433,15 @@
 			      	<form action="" method="get" accept-charset="utf-8">
 			      		<div class="input-group">
 						  <label>Nama</label>
-						  <input type="text" class="form-control">					  
+						  <input id="tnama" type="text" class="form-control">					  
 						</div>
 						<div class="input-group">
 						  <label>Alamat</label>
-						  <input type="text" class="form-control">					  
+						  <input id="talamat" type="text" class="form-control">					  
 						</div>
 						<div class="input-group">
-						  <label>Nama</label>
-						  <input type="text" class="form-control">					  
+						  <label>Telepon</label>
+						  <input id="ttelepon" type="text" class="form-control">					  
 						</div>
 						<div class="input-group">
 						  <label>Alamat</label>
