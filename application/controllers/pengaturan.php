@@ -9,6 +9,19 @@ class Pengaturan extends CI_Controller {
 		$this->load->view('belakang/template', $data);
 	}
 
+	public function dosen()
+	{
+		$data['title']="Dosen";
+		$data['maincontent']="belakang/form/dosen";
+		$this->load->view('belakang/template', $data);
+	}
+
+	public function matakuliah()
+	{
+		$data['title']="Matakuliah";
+		$data['maincontent']="belakang/form/matakuliah";
+		$this->load->view('belakang/template', $data);
+	}
 }
 
 /* End of file pengaturan.php */

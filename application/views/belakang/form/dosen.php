@@ -15,29 +15,45 @@
 		      </div>
 		      <div class="modal-body">
 		      	<form action="" method="get" role="form">
-		      		<div class="input-group">
-					  <label>Nama</label>
+		      		<div class="form-group">
+					  <label>NIP:</label>
 					  <input type="text" class="form-control">					  
 					</div>
-					<div class="input-group">
-					  <label>Alamat</label>
+					<div class="form-group">
+					  <label>Nama Dosen:</label>
 					  <input type="text" class="form-control">					  
 					</div>
-					<div class="input-group">
-					  <label>Nama</label>
+					<div class="form-group">
+					  <label>Jabatan Fungsional:</label>
 					  <input type="text" class="form-control">					  
 					</div>
-					<div class="input-group">
-					  <label>Alamat</label>
+					<div class="form-group">
+					  <label>Pendidikan:</label>
 					  <input type="text" class="form-control">					  
 					</div>
-					<div class="input-group">
-					  <label>Nama</label>
+					<div class="form-group">
+					  <label>Tempat Lahir:</label>
 					  <input type="text" class="form-control">					  
 					</div>
-					<div class="input-group">
-					  <label>Alamat</label>
+					<div class="form-group">
+					  <label>Tanggal Lahir:</label>
+					  <div class='input-group date' id='tgllahir'>	                    
+	                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+	                    </span>
+	                    <input type='text' class="form-control" />
+	                </div>					  
+					</div>
+					<div class="form-group">
+					  <label>Telepon:</label>					 
 					  <input type="text" class="form-control">					  
+					</div>
+					<div class="form-group">
+					  <label>HandPhone:</label>
+					  <input type="text" class="form-control">					  
+					</div>
+					<div class="form-group">
+					  <label>Alamat:</label>
+					  <textarea class="form-control" rows="3"></textarea>					  
 					</div>
 		      	</form>		      	
 		      </div>

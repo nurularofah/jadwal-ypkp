@@ -15,6 +15,7 @@
     <!-- Page-Level Plugin Scripts - Tables -->
     <script src="<?php echo base_url().'assets/js/plugins/dataTables/jquery.dataTables.js'; ?>"></script>
     <script src="<?php echo base_url().'assets/js/plugins/dataTables/dataTables.bootstrap.js'; ?>"></script>
+    <script src="<?php echo base_url().'assets/js/plugins/dataTables/dataTables.bootstrap.js'; ?>"></script>
     
     <script>
 
@@ -45,6 +46,9 @@
             document.getElementById("talamat").value=alamat;
             document.getElementById("ttelepon").value=telepon;
         } );
+
+        $('#tgllahir').datetimepicker();
+
     } );
 
     </script>
