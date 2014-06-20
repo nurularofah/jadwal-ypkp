@@ -19,10 +19,10 @@
                             <a href="#"><i class="fa fa-table fa-fw"></i> Data Master<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="<?php echo base_url().'dosen'; ?>">Dosen</a>
+                                    <a href="<?php echo base_url().'pengaturan/dosen'; ?>">Dosen</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url().'matakuliah'; ?>">Matakuliah</a>
+                                    <a href="<?php echo base_url().'pengaturan/matakuliah'; ?>">Matakuliah</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
