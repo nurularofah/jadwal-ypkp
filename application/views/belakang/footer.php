@@ -36,6 +36,10 @@
             var name = $('td', this).eq(1).text();
             alert( 'You clicked on '+name+'\'s row' );            
         } );
+
+        // $('#btambah').on('click', function(){
+        //     alert('yes');
+        // });
     } );
 
     </script>

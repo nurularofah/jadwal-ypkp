@@ -1,8 +1,29 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
-        Daftar Data Dosen
-    </div>
+    <h3 class="panel-title">Daftar Data Dosen</h3>
+  </div>
     <div class="panel-body">
+    	<div class="panel">
+    		<button id="btambah" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Tambah Baru</button>	
+    	</div>
+    	<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">Data Dosen</h4>
+		      </div>
+		      <div class="modal-body">
+		        ...
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Keluar</button>
+		        <button type="button" class="btn btn-primary">Simpan</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
     	<div class="table-responsive">
 		    <table class="table table-striped table-bordered table-hover display" id="example" cellspacing="0" width="100%">
 		        <thead>
@@ -381,4 +402,5 @@
 	
 	<!-- /.table-responsive -->					
 </div>	
-	
+
+
