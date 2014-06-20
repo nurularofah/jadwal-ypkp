@@ -34,12 +34,11 @@
 
         $('#example tbody').on('dblclick', 'tr', function () {
             var name = $('td', this).eq(1).text();
-            alert( 'You clicked on '+name+'\'s row' );            
+            // alert( 'You clicked on '+name+'\'s row' );  
+            $('#formTabel').modal({
+              show: true
+            });          
         } );
-
-        // $('#btambah').on('click', function(){
-        //     alert('yes');
-        // });
     } );
 
     </script>

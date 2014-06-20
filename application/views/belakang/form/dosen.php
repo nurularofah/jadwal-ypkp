@@ -4,17 +4,42 @@
   </div>
     <div class="panel-body">
     	<div class="panel">
-    		<button id="btambah" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Tambah Baru</button>	
+    		<button id="btambah" type="button" class="btn btn-primary" data-toggle="modal" data-target="#formBaru">Tambah Baru</button>	
     	</div>
     	<!-- Modal -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id="formBaru" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
 		      <div class="modal-header">		        
-		        <h4 class="modal-title" id="myModalLabel">Data Dosen</h4>
+		        <h4 class="modal-title" id="myModalLabel">Tambah Data Dosen</h4>
 		      </div>
 		      <div class="modal-body">
-		        ...
+		      	<form action="" method="get" accept-charset="utf-8">
+		      		<div class="input-group">
+					  <label>Nama</label>
+					  <input type="text" class="form-control">					  
+					</div>
+					<div class="input-group">
+					  <label>Alamat</label>
+					  <input type="text" class="form-control">					  
+					</div>
+					<div class="input-group">
+					  <label>Nama</label>
+					  <input type="text" class="form-control">					  
+					</div>
+					<div class="input-group">
+					  <label>Alamat</label>
+					  <input type="text" class="form-control">					  
+					</div>
+					<div class="input-group">
+					  <label>Nama</label>
+					  <input type="text" class="form-control">					  
+					</div>
+					<div class="input-group">
+					  <label>Alamat</label>
+					  <input type="text" class="form-control">					  
+					</div>
+		      	</form>		      	
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Keluar</button>
@@ -23,6 +48,8 @@
 		    </div>
 		  </div>
 		</div>
+
+		<!-- Tabel -->
     	<div class="table-responsive">
 		    <table class="table table-striped table-bordered table-hover display" id="example" cellspacing="0" width="100%">
 		        <thead>
@@ -392,10 +419,51 @@
 		                <td>Embedded devices</td>
 		                <td class="center">-</td>
 		                <td class="center">A</td>
-		            </tr>
-		            
+		            </tr>		            
 		        </tbody>
 		    </table>
+		    <!-- Modal -->
+			<div class="modal fade" id="formTabel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">		        
+			        <h4 class="modal-title" id="myModalLabel">Ubah Data Dosen</h4>
+			      </div>
+			      <div class="modal-body">
+			      	<form action="" method="get" accept-charset="utf-8">
+			      		<div class="input-group">
+						  <label>Nama</label>
+						  <input type="text" class="form-control">					  
+						</div>
+						<div class="input-group">
+						  <label>Alamat</label>
+						  <input type="text" class="form-control">					  
+						</div>
+						<div class="input-group">
+						  <label>Nama</label>
+						  <input type="text" class="form-control">					  
+						</div>
+						<div class="input-group">
+						  <label>Alamat</label>
+						  <input type="text" class="form-control">					  
+						</div>
+						<div class="input-group">
+						  <label>Nama</label>
+						  <input type="text" class="form-control">					  
+						</div>
+						<div class="input-group">
+						  <label>Alamat</label>
+						  <input type="text" class="form-control">					  
+						</div>
+			      	</form>		      	
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Keluar</button>
+			        <button type="button" class="btn btn-primary">Simpan</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
 		</div>
     </div>
 	
