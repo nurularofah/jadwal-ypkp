@@ -32,14 +32,15 @@
             }
         } );
 
-        $('#example tbody').on('dblclick', 'tr', function () {
+        $('#example tbody').on('click', 'tr', function () {
             var nama = $('td', this).eq(0).text();
             var alamat = $('td', this).eq(1).text();
             var telepon = $('td', this).eq(2).text();
-            // alert( 'You clicked on '+name+'\'s row' );  
+             
             $('#formTabel').modal({
               show: true
             });
+
             document.getElementById("tnama").value=nama;
             document.getElementById("talamat").value=alamat;
             document.getElementById("ttelepon").value=telepon;
