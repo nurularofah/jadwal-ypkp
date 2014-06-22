@@ -4,62 +4,79 @@
   </div>
     <div class="panel-body">
     	<div class="panel">
-    		<button id="btambah" type="button" class="btn btn-primary" data-toggle="modal" data-target="#formBaru">Tambah Baru</button>	
+    		<button id="btambah" type="button" class="btn btn-primary" data-toggle="modal" data-target="#formBaru"><i class="glyphicon glyphicon-plus"></i> Tambah Baru</button>	
     	</div>
     	<!-- Modal -->
 		<div class="modal fade" id="formBaru" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
-		      <div class="modal-header">		        
+		      <div class="modal-header">
+		      	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 		        <h4 class="modal-title" id="myModalLabel">Tambah Data Dosen</h4>
 		      </div>
 		      <div class="modal-body">
 		      	<form action="" method="get" role="form">
-		      		<div class="form-group">
-					  <label>NIP:</label>
-					  <input type="text" class="form-control">					  
-					</div>
-					<div class="form-group">
-					  <label>Nama Dosen:</label>
-					  <input type="text" class="form-control">					  
-					</div>
-					<div class="form-group">
-					  <label>Jabatan Fungsional:</label>
-					  <input type="text" class="form-control">					  
-					</div>
-					<div class="form-group">
-					  <label>Pendidikan:</label>
-					  <input type="text" class="form-control">					  
-					</div>
-					<div class="form-group">
-					  <label>Tempat Lahir:</label>
-					  <input type="text" class="form-control">					  
-					</div>
-					<div class="form-group">
-					  <label>Tanggal Lahir:</label>
-					  <div class='input-group date' id='tgllahir'>	                    
-	                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-	                    </span>
-	                    <input type='text' class="form-control" />
-	                </div>					  
-					</div>
-					<div class="form-group">
-					  <label>Telepon:</label>					 
-					  <input type="text" class="form-control">					  
-					</div>
-					<div class="form-group">
-					  <label>HandPhone:</label>
-					  <input type="text" class="form-control">					  
-					</div>
-					<div class="form-group">
-					  <label>Alamat:</label>
-					  <textarea class="form-control" rows="3"></textarea>					  
-					</div>
+		      		<div class="form-horizontal">
+		      			<div class="form-group">
+		      				<label class="col-lg-3">NIP:</label>
+					        <div class="col-lg-8">
+					            <input type="text" class="form-control">
+					        </div>					  
+						</div>
+						<div class="form-group">
+							<label class="col-lg-3">Nama:</label>
+					        <div class="col-lg-8">
+					            <input type="text" class="form-control">
+					        </div>				  
+						</div>
+						<div class="form-group">
+							<label class="col-lg-3">Jabatan Fungsional:</label>
+					        <div class="col-lg-8">
+					            <input type="text" class="form-control">
+					        </div>						  					  
+						</div>
+						<div class="form-group">
+							<label class="col-lg-3">Pendidikan:</label>
+					        <div class="col-lg-8">
+					            <input type="text" class="form-control">
+					        </div>				  
+						</div>
+						<div class="form-group">
+							<label class="col-lg-3">Tempat Lahir:</label>
+					        <div class="col-lg-8">
+					            <input type="text" class="form-control">
+					        </div>
+						</div>
+						<div class="form-group">
+							<label class="col-lg-3">Tanggal Lahir:</label>
+					        <div class="col-lg-8">
+					            <input type="text" id="tanggal1" class="form-control">
+					        </div>
+						</div>
+						<div class="form-group">
+							<label class="col-lg-3">Telepon:</label>
+					        <div class="col-lg-8">
+					            <input type="text" class="form-control">
+					        </div>
+						</div>
+						<div class="form-group">
+							<label class="col-lg-3">HandPhone:</label>
+					        <div class="col-lg-8">
+					            <input type="text" class="form-control">
+					        </div>
+					    </div>
+						<div class="form-group">
+							<label class="col-lg-3">Alamat:</label>
+					        <div class="col-lg-8">
+					            <textarea class="form-control" rows="3"></textarea>
+					        </div>					  
+						</div>
+		      		</div>		      		
 		      	</form>		      	
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Keluar</button>
-		        <button type="button" class="btn btn-primary">Simpan</button>
+		        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="glyphicon glyphicon-collapse-up"></i> Keluar</button>
+		        <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> Simpan</button>
 		      </div>
 		    </div>
 		  </div>
@@ -442,7 +459,8 @@
 			<div class="modal fade" id="formTabel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			  <div class="modal-dialog">
 			    <div class="modal-content">
-			      <div class="modal-header">		        
+			      <div class="modal-header">
+			      	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>		        
 			        <h4 class="modal-title" id="myModalLabel">Ubah Data Dosen</h4>
 			      </div>
 			      <div class="modal-body">
@@ -474,8 +492,9 @@
 			      	</form>		      	
 			      </div>
 			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">Keluar</button>
-			        <button type="button" class="btn btn-primary">Simpan</button>
+			        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="glyphicon glyphicon-collapse-up"></i> Keluar</button>
+			        <button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-remove"></i> Hapus</button>
+		        <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> Ubah</button>
 			      </div>
 			    </div>
 			  </div>

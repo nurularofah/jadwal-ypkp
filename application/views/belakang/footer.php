@@ -15,8 +15,16 @@
     <!-- Page-Level Plugin Scripts - Tables -->
     <script src="<?php echo base_url().'assets/js/plugins/dataTables/jquery.dataTables.js'; ?>"></script>
     <script src="<?php echo base_url().'assets/js/plugins/dataTables/dataTables.bootstrap.js'; ?>"></script>
-    <script src="<?php echo base_url().'assets/js/plugins/dataTables/dataTables.bootstrap.js'; ?>"></script>
-    
+
+
+    <!-- Coba library -->    
+    <script src="<?php echo base_url('assets/js/holder.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/bootstrap-datepicker.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/application.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
+
+
+
     <script>
     $(document).ready(function() {
         $('#example').dataTable();
@@ -46,10 +54,26 @@
             document.getElementById("ttelepon").value=telepon;
         } );
 
-        $('#tgllahir').datetimepicker();
+            
+        $(function(){
+            $("#tgl").datepicker({
+                format:'yyyy-mm-dd'
+            });
+
+            $("#tanggal1").datepicker({
+                format:'yyyy-mm-dd'
+            });
+            
+            $("#tanggal2").datepicker({
+                format:'yyyy-mm-dd'
+            });
+            
+            $("#tanggal").datepicker({
+                format:'yyyy-mm-dd'
+            });
+        })
 
     } );
-
     </script>
 
 </body>
