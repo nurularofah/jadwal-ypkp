@@ -465,30 +465,62 @@
 			      </div>
 			      <div class="modal-body">
 			      	<form action="" method="get" accept-charset="utf-8">
-			      		<div class="input-group">
-						  <label>Nama</label>
-						  <input id="tnama" type="text" class="form-control">					  
-						</div>
-						<div class="input-group">
-						  <label>Alamat</label>
-						  <input id="talamat" type="text" class="form-control">					  
-						</div>
-						<div class="input-group">
-						  <label>Telepon</label>
-						  <input id="ttelepon" type="text" class="form-control">					  
-						</div>
-						<div class="input-group">
-						  <label>Alamat</label>
-						  <input type="text" class="form-control">					  
-						</div>
-						<div class="input-group">
-						  <label>Nama</label>
-						  <input type="text" class="form-control">					  
-						</div>
-						<div class="input-group">
-						  <label>Alamat</label>
-						  <input type="text" class="form-control">					  
-						</div>
+			      		<div class="form-horizontal">
+			      			<div class="form-group">
+			      				<label class="col-lg-3">NIP:</label>
+						        <div class="col-lg-8">
+						            <input type="text" class="form-control">
+						        </div>					  
+							</div>
+							<div class="form-group">
+								<label class="col-lg-3">Nama:</label>
+						        <div class="col-lg-8">
+						            <input type="text" class="form-control">
+						        </div>				  
+							</div>
+							<div class="form-group">
+								<label class="col-lg-3">Jabatan Fungsional:</label>
+						        <div class="col-lg-8">
+						            <input type="text" class="form-control">
+						        </div>						  					  
+							</div>
+							<div class="form-group">
+								<label class="col-lg-3">Pendidikan:</label>
+						        <div class="col-lg-8">
+						            <input type="text" class="form-control">
+						        </div>				  
+							</div>
+							<div class="form-group">
+								<label class="col-lg-3">Tempat Lahir:</label>
+						        <div class="col-lg-8">
+						            <input type="text" class="form-control">
+						        </div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-3">Tanggal Lahir:</label>
+						        <div class="col-lg-8">
+						            <input type="text" id="tanggal1" class="form-control">
+						        </div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-3">Telepon:</label>
+						        <div class="col-lg-8">
+						            <input type="text" class="form-control">
+						        </div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-3">HandPhone:</label>
+						        <div class="col-lg-8">
+						            <input type="text" class="form-control">
+						        </div>
+						    </div>
+							<div class="form-group">
+								<label class="col-lg-3">Alamat:</label>
+						        <div class="col-lg-8">
+						            <textarea class="form-control" rows="3"></textarea>
+						        </div>					  
+							</div>
+			      		</div>
 			      	</form>		      	
 			      </div>
 			      <div class="modal-footer">
