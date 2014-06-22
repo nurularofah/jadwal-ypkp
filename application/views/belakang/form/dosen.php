@@ -50,7 +50,7 @@
 						<div class="form-group">
 							<label class="col-lg-3">Tanggal Lahir:</label>
 					        <div class="col-lg-8">
-					            <input type="text" id="tanggallahir1" class="form-control">
+					            <input type="text" id="ttanggallahir1" class="form-control">
 					        </div>
 						</div>
 						<div class="form-group">
@@ -105,7 +105,7 @@
 		                <td>Kepala Jurusan</td>
 		                <td>Doktor</td>
 		                <td>Bandung</td>
-		                <td>7-7-1990</td>
+		                <td>1990-7-7</td>
 		                <td>0225891313</td>
 		                <td>085720448884</td>
 		                <td>Jalan Soreang No 48 RT02/RW10 Desa Buninagara Kecamatan Kutawaringin Kabupaten Bandung</td>
@@ -115,8 +115,8 @@
 		                <td>Nurul Arofah</td>
 		                <td>Dosen Kewirausahaan</td>
 		                <td>Magister</td>
-		                <td>Bandung</td>
-		                <td>22-6-1991</td>
+		                <td>Garut</td>
+		                <td>1991-6-22</td>
 		                <td>0225891313</td>
 		                <td>0857204511614</td>
 		                <td>Komplek Angkasa Mekar No 6 Cibaduyut Bandung</td>
@@ -167,7 +167,7 @@
 							<div class="form-group">
 								<label class="col-lg-3">Tanggal Lahir:</label>
 						        <div class="col-lg-8">
-						            <input type="text" id="tanggallahir2" class="form-control">
+						            <input type="text" id="ttanggallahir2" class="form-control">
 						        </div>
 							</div>
 							<div class="form-group">

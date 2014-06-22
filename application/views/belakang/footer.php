@@ -68,11 +68,11 @@
 
             
         $(function(){
-            $("#tanggallahir1").datepicker({
+            $("#ttanggallahir1").datepicker({
                 format:'yyyy-mm-dd'
             });
 
-            $("#tanggallahir2").datepicker({
+            $("#ttanggallahir2").datepicker({
                 format:'yyyy-mm-dd'
             });            
         })
