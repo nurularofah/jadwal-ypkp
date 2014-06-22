@@ -49,28 +49,26 @@
               show: true
             });
 
-            document.getElementById("tnama").value=nama;
-            document.getElementById("talamat").value=alamat;
-            document.getElementById("ttelepon").value=telepon;
+            document.getElementById("tnip").value=nama;
+            document.getElementById("tnama").value=alamat;
+            document.getElementById("tjabatan").value=telepon;
+            document.getElementById("tpendidikan").value=nama;
+            document.getElementById("ttempatlahir").value=alamat;
+            document.getElementById("ttanggallahir2").value=telepon;
+            document.getElementById("ttelepon").value=nama;
+            document.getElementById("thandphone").value=alamat;
+            document.getElementById("talamat").value=telepon;
         } );
 
             
         $(function(){
-            $("#tgl").datepicker({
+            $("#tanggallahir1").datepicker({
                 format:'yyyy-mm-dd'
             });
 
-            $("#tanggal1").datepicker({
+            $("#tanggallahir2").datepicker({
                 format:'yyyy-mm-dd'
-            });
-            
-            $("#tanggal2").datepicker({
-                format:'yyyy-mm-dd'
-            });
-            
-            $("#tanggal").datepicker({
-                format:'yyyy-mm-dd'
-            });
+            });            
         })
 
     } );
