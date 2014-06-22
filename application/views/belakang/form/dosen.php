@@ -76,7 +76,7 @@
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="glyphicon glyphicon-collapse-up"></i> Keluar</button>
-		        <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> Simpan</button>
+		        <button id="bSimpanDosen" type="button" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> Simpan</button>
 		      </div>
 		    </div>
 		  </div>
@@ -203,6 +203,4 @@
     </div>
 	
 	<!-- /.table-responsive -->					
-</div>	
-
-
+</div>

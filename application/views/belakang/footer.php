@@ -77,6 +77,10 @@
             });            
         })
 
+        $("#bSimpanDosen").click(function(){
+            alert("Simpan");
+        });
+
     } );
     </script>
 
