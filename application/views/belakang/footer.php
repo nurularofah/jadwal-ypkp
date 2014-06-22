@@ -41,23 +41,29 @@
         } );
 
         $('#example tbody').on('click', 'tr', function () {
-            var nama = $('td', this).eq(0).text();
-            var alamat = $('td', this).eq(1).text();
-            var telepon = $('td', this).eq(2).text();
-             
+            var tnip = $('td', this).eq(0).text();            
+            var tnama = $('td', this).eq(1).text();
+            var tjabatan = $('td', this).eq(2).text();
+            var tpendidikan = $('td', this).eq(3).text();
+            var ttempatlahir = $('td', this).eq(4).text();
+            var ttanggallahir2 = $('td', this).eq(5).text();
+            var ttelepon = $('td', this).eq(6).text();
+            var thandphone = $('td', this).eq(7).text();
+            var talamat = $('td', this).eq(8).text();
+
             $('#formTabel').modal({
               show: true
             });
 
-            document.getElementById("tnip").value=nama;
-            document.getElementById("tnama").value=alamat;
-            document.getElementById("tjabatan").value=telepon;
-            document.getElementById("tpendidikan").value=nama;
-            document.getElementById("ttempatlahir").value=alamat;
-            document.getElementById("ttanggallahir2").value=telepon;
-            document.getElementById("ttelepon").value=nama;
-            document.getElementById("thandphone").value=alamat;
-            document.getElementById("talamat").value=telepon;
+            document.getElementById("tnip").value=tnip;
+            document.getElementById("tnama").value=tnama;
+            document.getElementById("tjabatan").value=tjabatan;
+            document.getElementById("tpendidikan").value=tpendidikan;
+            document.getElementById("ttempatlahir").value=ttempatlahir;
+            document.getElementById("ttanggallahir2").value=ttanggallahir2;
+            document.getElementById("ttelepon").value=ttelepon;
+            document.getElementById("thandphone").value=thandphone;
+            document.getElementById("talamat").value=talamat;
         } );
 
             
