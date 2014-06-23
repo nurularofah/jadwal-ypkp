@@ -51,7 +51,17 @@ $(document).ready(function() {
     })
 
     $("#bSimpanDosen").click(function(){
-        alert("Simpan");
+        var nip=$("#tnip1").val();
+
+        $.ajax({
+            url: "<?php echo base_url('pengaturan/TambahDosen'); ?>",
+            type: "POST",
+            data: "nip="+nip,
+            cache: false,
+            success: function(html){
+                
+            }
+        });
     });
 
 } );

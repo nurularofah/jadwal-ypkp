@@ -17,6 +17,12 @@ class Pengaturan extends CI_Controller {
 		$this->load->view('belakang/template', $data);
 	}
 
+	public function TambahDosen()
+	{
+		$nip=$this->input->post('nip');
+		echo $nip;
+	}
+
 	public function matakuliah()
 	{
 		$data['title']="Matakuliah";
