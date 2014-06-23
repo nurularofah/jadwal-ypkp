@@ -12,6 +12,17 @@ class Mdosen extends CI_Model {
 		$this->db->insert('usb_dosen', $dta);
 	}
 
+	function getAllDosen()
+	{
+		$query=$this->db->get('usb_dosen');
+		if($query->num_rows()>0){
+			foreach ($query->result() as $row) {
+				$xxx[]=$row;
+			}
+			return $xxx;
+		}
+	}
+
 }
 
 /* End of file mDosen.php */

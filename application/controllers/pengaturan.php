@@ -17,6 +17,7 @@ class Pengaturan extends CI_Controller {
 
 	public function dosen()
 	{
+		$data['records']=$this->mdosen->getAllDosen();
 		$data['title']="Dosen";
 		$data['maincontent']="belakang/form/dosen";
 		$data['events']="belakang/javascript/dosen";

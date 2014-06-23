@@ -98,29 +98,20 @@
 		                <th>Alamat</th>		                
 		            </tr>
 		        </thead>
-		        <tbody>		            
+		        <tbody>
+		        	<?php foreach ($records as $row): ?>
 		            <tr>
-		                <td>6310199</td>
-		                <td>Roni Irawan</td>
-		                <td>Kepala Jurusan</td>
-		                <td>Doktor</td>
-		                <td>Bandung</td>
-		                <td>1990-7-7</td>
-		                <td>0225891313</td>
-		                <td>085720448884</td>
-		                <td>Jalan Soreang No 48 RT02/RW10 Desa Buninagara Kecamatan Kutawaringin Kabupaten Bandung</td>
+		                <td><?php echo $row->nip; ?></td>
+		                <td><?php echo $row->nm_dosen; ?></td>
+		                <td><?php echo $row->jab_fungsional; ?></td>
+		                <td><?php echo $row->pendidikan; ?></td>
+		                <td><?php echo $row->tempat_lahir; ?></td>
+		                <td><?php echo $row->tgl_lahir; ?></td>
+		                <td><?php echo $row->no_tlp; ?></td>
+		                <td><?php echo $row->no_hp; ?></td>
+		                <td><?php echo $row->alamat; ?></td>
 		            </tr>
-		            <tr>
-		                <td>6310046</td>
-		                <td>Nurul Arofah</td>
-		                <td>Dosen Kewirausahaan</td>
-		                <td>Magister</td>
-		                <td>Garut</td>
-		                <td>1991-6-22</td>
-		                <td>0225891313</td>
-		                <td>0857204511614</td>
-		                <td>Komplek Angkasa Mekar No 6 Cibaduyut Bandung</td>
-		            </tr>
+		            <?php endforeach; ?>
 		        </tbody>
 		    </table>
 		    <!-- Modal -->
