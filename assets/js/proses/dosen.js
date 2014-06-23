@@ -53,11 +53,13 @@ $(document).ready(function() {
         var nip=$("#tnip1").val();
 
         $.ajax({
-            url: "<?php echo base_url('pengaturan/TambahDosen'); ?>",
+            url: "TambahDosen",
             type: "POST",
-            data: "nip="+nip,
+            data:{
+                nip:nip
+            },
             cache: false,
-            success: function(html){
+            success: function(){
                 
             }
         });

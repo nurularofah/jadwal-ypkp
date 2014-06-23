@@ -2,6 +2,12 @@
 
 class Pengaturan extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('mdosen');
+	}
+
 	public function index()
 	{
 		$data['title']="Dashboard";
@@ -19,10 +25,11 @@ class Pengaturan extends CI_Controller {
 
 	public function TambahDosen()
 	{
-		$nip=$this->input->post('nip');
-		$data= array(
-			'nip' => $nip 
-			);
+		$nip=$this->input->post('nip');		
+		$dt=array(
+			'nip' => $nip
+		);
+		$this->mdosen->TambahDosen($dt);
 	}
 
 	public function matakuliah()
