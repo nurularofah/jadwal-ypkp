@@ -1,8 +1,39 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class MDosen extends CI_Model {
+class Mdosen extends CI_Model {
 
-	
+	public function __construct()
+	{
+		parent::__construct();		
+	}
+
+	function TambahDosen($dta)
+	{
+		$this->db->insert('usb_dosen', $dta);
+	}
+
+	function getAllDosen()
+	{
+		$query=$this->db->get('usb_dosen');
+		if($query->num_rows()>0){
+			foreach ($query->result() as $row) {
+				$xxx[]=$row;
+			}
+			return $xxx;
+		}
+	}
+
+	function ubahDosen($nip,$tmp)
+	{
+		$this->db->where('nip',$nip);
+		$this->db->update('usb_dosen', $tmp);
+	}
+
+	function hapusDosen($nip)
+	{
+		$this->db->where('nip',$nip);
+		$this->db->delete('usb_dosen');
+	}
 
 }
 

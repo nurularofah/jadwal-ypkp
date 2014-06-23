@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `jadwal-usb` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `jadwal-usb`;
--- MySQL dump 10.13  Distrib 5.5.37, for debian-linux-gnu (i686)
+-- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
 --
 -- Host: localhost    Database: jadwal-usb
 -- ------------------------------------------------------
--- Server version	5.5.31
+-- Server version	5.5.27
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -20,7 +20,7 @@ USE `jadwal-usb`;
 --
 -- Table structure for table `usb_detail_info_akademik`
 --
- 
+
 DROP TABLE IF EXISTS `usb_detail_info_akademik`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -184,6 +184,7 @@ CREATE TABLE `usb_dosen` (
 
 LOCK TABLES `usb_dosen` WRITE;
 /*!40000 ALTER TABLE `usb_dosen` DISABLE KEYS */;
+INSERT INTO `usb_dosen` VALUES ('100001','roni','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100002','irawan','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100003','nurul','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100004','Nurul Arofah','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang');
 /*!40000 ALTER TABLE `usb_dosen` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -535,4 +536,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-06-22 23:17:33
+-- Dump completed on 2014-06-23 22:18:10

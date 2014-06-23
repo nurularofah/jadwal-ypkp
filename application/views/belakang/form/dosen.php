@@ -184,8 +184,8 @@
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="glyphicon glyphicon-collapse-up"></i> Keluar</button>
-			        <button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-remove"></i> Hapus</button>
-		        <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> Ubah</button>
+			        <button id="bHapusDosen" type="button" class="btn btn-warning"><i class="glyphicon glyphicon-remove"></i> Hapus</button>
+		        <button id="bUbahDosen" type="button" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> Ubah</button>
 			      </div>
 			    </div>
 			  </div>

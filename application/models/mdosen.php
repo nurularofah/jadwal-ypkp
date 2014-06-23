@@ -23,9 +23,16 @@ class Mdosen extends CI_Model {
 		}
 	}
 
-	function ubahDosen($nip,$nama,$jabatan,$pendidikan,$)
+	function ubahDosen($nip,$tmp)
 	{
-		# code...
+		$this->db->where('nip',$nip);
+		$this->db->update('usb_dosen', $tmp);
+	}
+
+	function hapusDosen($nip)
+	{
+		$this->db->where('nip',$nip);
+		$this->db->delete('usb_dosen');
 	}
 
 }

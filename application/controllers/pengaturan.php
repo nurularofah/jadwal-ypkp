@@ -15,6 +15,10 @@ class Pengaturan extends CI_Controller {
 		$this->load->view('belakang/template', $data);
 	}
 
+
+
+
+	// CRUD DOSEN
 	public function dosen()
 	{
 		$data['records']=$this->mdosen->getAllDosen();
@@ -47,15 +51,35 @@ class Pengaturan extends CI_Controller {
 			'no_hp' => $handphone,
 			'alamat' => $alamat	
 		);
-		$this->mdosen->TambahDosen($dt);
-		$this->load->view('pengaturan/dosen');
+		$this->mdosen->TambahDosen($dt);		
 	}
 
 	public function UbahDosen()
 	{
-		# code...
+		$tmp=array(
+			'nm_dosen' => $this->input->post('nama'),
+			'jab_fungsional' => $this->input->post('jabatan'),
+			'pendidikan' => $this->input->post('pendidikan'),
+			'tempat_lahir' => $this->input->post('tempatlahir'),
+			'tgl_lahir' => $this->input->post('tanggallahir'),
+			'no_tlp' => $this->input->post('telepon'),
+			'no_hp' => $this->input->post('handphone'),
+			'alamat' => $this->input->post('alamat'),
+		);
+		$nip=$this->input->post('nip');
+		$this->mdosen->ubahDosen($nip,$tmp);
 	}
 
+	public function HapusDosen()
+	{
+		$nip=$this->input->post('nip');
+		$this->mdosen->hapusDosen($nip);
+	}
+
+
+
+
+	// CRUD MATAKULIAH
 	public function matakuliah()
 	{
 		$data['title']="Matakuliah";

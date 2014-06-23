@@ -81,4 +81,53 @@ $(document).ready(function() {
         });
     });
 
+
+    $("#bUbahDosen").click(function(){
+        var nip=$("#tnip").val();
+        var nama=$("#tnama").val();
+        var jabatan=$("#tjabatan").val();
+        var pendidikan=$("#tpendidikan").val();
+        var tempatlahir=$("#ttempatlahir").val();
+        var tanggallahir=$("#ttanggallahir2").val();
+        var telepon=$("#ttelepon").val();
+        var handphone=$("#thandphone").val();
+        var alamat=$("#talamat").val();
+
+        $.ajax({
+            url: "UbahDosen",
+            type: "POST",
+            data:{
+                nip:nip,
+                nama:nama,
+                jabatan:jabatan,
+                pendidikan:pendidikan,
+                tempatlahir:tempatlahir,
+                tanggallahir:tanggallahir,
+                telepon:telepon,
+                handphone:handphone,
+                alamat:alamat
+            },
+            cache: false,
+            success: function(){
+                
+            }
+        });
+    });
+
+    $("#bHapusDosen").click(function(){
+        var nip=$("#tnip").val();        
+
+        $.ajax({
+            url: "HapusDosen",
+            type: "POST",
+            data:{
+                nip:nip
+            },
+            cache: false,
+            success: function(){
+                
+            }
+        });
+    });
+
 } );
