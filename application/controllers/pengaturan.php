@@ -13,6 +13,7 @@ class Pengaturan extends CI_Controller {
 	{
 		$data['title']="Dosen";
 		$data['maincontent']="belakang/form/dosen";
+		$data['events']="belakang/javascript/dosen";
 		$this->load->view('belakang/template', $data);
 	}
 
