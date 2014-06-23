@@ -25,11 +25,29 @@ class Pengaturan extends CI_Controller {
 
 	public function TambahDosen()
 	{
-		$nip=$this->input->post('nip');		
+		$nip=$this->input->post('nip');
+		$nama=$this->input->post('nama');
+		$jabatan=$this->input->post('jabatan');
+		$pendidikan=$this->input->post('pendidikan');
+		$tempatlahir=$this->input->post('tempatlahir');
+		$tanggallahir=$this->input->post('tanggallahir');
+		$telepon=$this->input->post('telepon');
+		$handphone=$this->input->post('handphone');
+		$alamat=$this->input->post('alamat');
+
 		$dt=array(
-			'nip' => $nip
+			'nip' => $nip,
+			'nm_dosen' => $nama,
+			'jab_fungsional' => $jabatan,
+			'pendidikan' => $pendidikan,
+			'tempat_lahir' => $tempatlahir,
+			'tgl_lahir' => $tanggallahir,
+			'no_tlp' => $telepon,
+			'no_hp' => $handphone,
+			'alamat' => $alamat	
 		);
 		$this->mdosen->TambahDosen($dt);
+		$this->load->view('pengaturan/dosen');
 	}
 
 	public function matakuliah()

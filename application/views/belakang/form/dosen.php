@@ -84,7 +84,7 @@
 
 		<!-- Tabel -->
     	<div class="table-responsive">
-		    <table class="table table-striped table-bordered table-hover display" id="example" cellspacing="0" width="100%">
+		    <table class="table table-hover display" id="example" cellspacing="0" width="100%">
 		        <thead>
 		            <tr>
 		                <th>NIP</th>
@@ -101,7 +101,7 @@
 		        <tbody>		            
 		            <tr>
 		                <td>6310199</td>
-		                <td>Asep Roni Irawan</td>
+		                <td>Roni Irawan</td>
 		                <td>Kepala Jurusan</td>
 		                <td>Doktor</td>
 		                <td>Bandung</td>

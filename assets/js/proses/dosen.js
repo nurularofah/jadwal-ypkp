@@ -51,12 +51,28 @@ $(document).ready(function() {
 
     $("#bSimpanDosen").click(function(){
         var nip=$("#tnip1").val();
+        var nama=$("#tnama1").val();
+        var jabatan=$("#tjabatan1").val();
+        var pendidikan=$("#tpendidikan1").val();
+        var tempatlahir=$("#ttempatlahir1").val();
+        var tanggallahir=$("#ttanggallahir1").val();
+        var telepon=$("#ttelepon1").val();
+        var handphone=$("#thandphone1").val();
+        var alamat=$("#talamat1").val();
 
         $.ajax({
             url: "TambahDosen",
             type: "POST",
             data:{
-                nip:nip
+                nip:nip,
+                nama:nama,
+                jabatan:jabatan,
+                pendidikan:pendidikan,
+                tempatlahir:tempatlahir,
+                tanggallahir:tanggallahir,
+                telepon:telepon,
+                handphone:handphone,
+                alamat:alamat
             },
             cache: false,
             success: function(){
