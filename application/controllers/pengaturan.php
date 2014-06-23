@@ -51,6 +51,11 @@ class Pengaturan extends CI_Controller {
 		$this->load->view('pengaturan/dosen');
 	}
 
+	public function UbahDosen()
+	{
+		# code...
+	}
+
 	public function matakuliah()
 	{
 		$data['title']="Matakuliah";

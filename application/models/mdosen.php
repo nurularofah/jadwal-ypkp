@@ -23,6 +23,11 @@ class Mdosen extends CI_Model {
 		}
 	}
 
+	function ubahDosen($nip,$nama,$jabatan,$pendidikan,$)
+	{
+		# code...
+	}
+
 }
 
 /* End of file mDosen.php */
