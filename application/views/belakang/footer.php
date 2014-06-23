@@ -22,9 +22,7 @@
     <script src="<?php echo base_url('assets/js/bootstrap-datepicker.js');?>"></script>
     <script src="<?php echo base_url('assets/js/application.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
-
-    <!-- Events -->
-    <?php $this->load->view($events); ?>
+    <script src="<?php echo base_url('assets/js/proses/dosen.js');?>"></script>
 
 </body>
 </html>

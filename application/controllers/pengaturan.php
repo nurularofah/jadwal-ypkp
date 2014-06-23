@@ -20,7 +20,9 @@ class Pengaturan extends CI_Controller {
 	public function TambahDosen()
 	{
 		$nip=$this->input->post('nip');
-		echo $nip;
+		$data= array(
+			'nip' => $nip 
+			);
 	}
 
 	public function matakuliah()

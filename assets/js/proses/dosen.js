@@ -1,4 +1,3 @@
-<script>
 $(document).ready(function() {
     $('#example').dataTable();
     var table = $('#example').DataTable();
@@ -65,4 +64,3 @@ $(document).ready(function() {
     });
 
 } );
-</script>
