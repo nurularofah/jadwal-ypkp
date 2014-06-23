@@ -7,6 +7,8 @@ class Mdosen extends CI_Model {
 		parent::__construct();		
 	}
 
+
+	// CRUD DOSEN
 	function TambahDosen($dta)
 	{
 		$this->db->insert('usb_dosen', $dta);
@@ -35,6 +37,20 @@ class Mdosen extends CI_Model {
 		$this->db->delete('usb_dosen');
 	}
 
+
+
+
+	// CRUD MATAKULIAH
+	function getAllMatkul()
+	{
+		$query=$this->db->get('usb_matkul');
+		if($query->num_rows()>0){
+			foreach ($query->result() as $row) {
+				$xxx[]=$row;
+			}
+			return $xxx;
+		}
+	}
 }
 
 /* End of file mDosen.php */

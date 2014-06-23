@@ -4,8 +4,7 @@ class Pengaturan extends CI_Controller {
 
 	public function __construct()
 	{
-		parent::__construct();
-		$this->load->model('mdosen');
+		parent::__construct();		
 	}
 
 	public function index()
@@ -82,9 +81,40 @@ class Pengaturan extends CI_Controller {
 	// CRUD MATAKULIAH
 	public function matakuliah()
 	{
+		$data['records']=$this->mdosen->getAllMatkul();
 		$data['title']="Matakuliah";
 		$data['maincontent']="belakang/form/matakuliah";
 		$this->load->view('belakang/template', $data);
+	}
+
+	public function TambahMatkul()
+	{
+		$kode=$this->input->post('kode');
+		$matkul=$this->input->post('matkul');
+		$sks=$this->input->post('sks');		
+
+		$dt=array(
+			'kd_matkul' => $kode,
+			'nm_matkul' => $matkul,
+			'sks' => $sks
+		);
+		$this->mmatakuliah->TambahMatkul($dt);		
+	}
+
+	public function UbahMatkul()
+	{
+		$tmp=array(
+			'nm_matkul' => $this->input->post('matkul'),
+			'sks' => $this->input->post('sks')
+		);
+		$kode=$this->input->post('kode');
+		$this->mmatakuliah->ubahMatkul($kode,$tmp);
+	}
+
+	public function HapusMatkul()
+	{
+		$kode=$this->input->post('kode');
+		$this->mmatakuliah->hapusMatkul($kode);
 	}
 }
 

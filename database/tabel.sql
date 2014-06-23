@@ -401,6 +401,7 @@ CREATE TABLE `usb_matkul` (
 
 LOCK TABLES `usb_matkul` WRITE;
 /*!40000 ALTER TABLE `usb_matkul` DISABLE KEYS */;
+INSERT INTO `usb_matkul` VALUES ('A01','Data Mining',2),('A02','Database Sertifikasi',2),('A03','Jaringan Komputer',2),('A04','Pemrograman Web',4),('A05','Artifical Intelegense',4);
 /*!40000 ALTER TABLE `usb_matkul` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -536,4 +537,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-06-23 22:18:10
+-- Dump completed on 2014-06-23 22:54:12
