@@ -81,7 +81,7 @@ class Pengaturan extends CI_Controller {
 	// CRUD MATAKULIAH
 	public function matakuliah()
 	{
-		$data['records']=$this->mdosen->getAllMatkul();
+		$data['records']=$this->mmatakuliah->getAllMatkul();
 		$data['title']="Matakuliah";
 		$data['maincontent']="belakang/form/matakuliah";
 		$this->load->view('belakang/template', $data);
@@ -90,7 +90,7 @@ class Pengaturan extends CI_Controller {
 	public function TambahMatkul()
 	{
 		$kode=$this->input->post('kode');
-		$matkul=$this->input->post('matkul');
+		$matkul=$this->input->post('matakuliah');
 		$sks=$this->input->post('sks');		
 
 		$dt=array(
@@ -104,7 +104,7 @@ class Pengaturan extends CI_Controller {
 	public function UbahMatkul()
 	{
 		$tmp=array(
-			'nm_matkul' => $this->input->post('matkul'),
+			'nm_matkul' => $this->input->post('matakuliah'),
 			'sks' => $this->input->post('sks')
 		);
 		$kode=$this->input->post('kode');
