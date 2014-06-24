@@ -7,14 +7,16 @@ class Mjadwalmatakuliah extends CI_Model {
 		parent::__construct();			
 	}	
 
-	public function getAllJadwalMatakuliah()
+	public function getJadwalMatakuliah()
 	{
-		$query=$this->db->get('usb_jadwalmatkul');
+		$query=$this->db->get('vjadwalmatakuliah');
 		if($query->num_rows()>0){
 			foreach ($query->result() as $row) {
 				$xxx[]=$row;
 			}
 			return $xxx;
+		} else {			
+			return $xxx="Data Tidak ditemukan";
 		}
 	}
 }

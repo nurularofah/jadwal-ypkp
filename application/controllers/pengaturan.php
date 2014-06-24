@@ -121,7 +121,7 @@ class Pengaturan extends CI_Controller {
 	// CRUD JADWAL MATAKULIAH
 	public function jadwalmatakuliah()
 	{
-		$data['records']=$this->mjadwalmatakuliah->getAllJadwalMatakuliah();
+		$data['records']=$this->mjadwalmatakuliah->getJadwalMatakuliah();
 		$data['title']="Jadwal Matakuliah";
 		$data['maincontent']="belakang/form/jadwalmatakuliah";
 		$this->load->view('belakang/template', $data);

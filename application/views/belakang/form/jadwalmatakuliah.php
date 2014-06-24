@@ -44,13 +44,13 @@
 				        <tbody>
 				        	<?php foreach ($records as $row): ?>
 				            <tr>
-				                <td><?php echo $row->nip; ?></td>
-				                <td><?php echo $row->nm_dosen; ?></td>
-				                <td><?php echo $row->jab_fungsional; ?></td>
-				                <td><?php echo $row->pendidikan; ?></td>
-				                <td><?php echo $row->tempat_lahir; ?></td>
-				                <td><?php echo $row->tgl_lahir; ?></td>
-				                <td><?php echo $row->no_tlp; ?></td>
+				                <td><?php echo $row->kode; ?></td>
+				                <td><?php echo $row->hari; ?></td>
+				                <td><?php echo $row->matakuliah; ?></td>
+				                <td><?php echo $row->sks; ?></td>
+				                <td><?php echo $row->jam; ?></td>
+				                <td><?php echo $row->ruangan; ?></td>
+				                <td><?php echo $row->dosen; ?></td>
 				            </tr>
 				            <?php endforeach; ?>
 				        </tbody>
