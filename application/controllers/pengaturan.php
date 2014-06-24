@@ -116,6 +116,16 @@ class Pengaturan extends CI_Controller {
 		$kode=$this->input->post('kode');
 		$this->mmatakuliah->hapusMatkul($kode);
 	}
+
+
+	// CRUD JADWAL MATAKULIAH
+	public function jadwalmatakuliah()
+	{
+		$data['records']=$this->mjadwalmatakuliah->getAllJadwalMatakuliah();
+		$data['title']="Jadwal Matakuliah";
+		$data['maincontent']="belakang/form/jadwalmatakuliah";
+		$this->load->view('belakang/template', $data);
+	}
 }
 
 /* End of file pengaturan.php */

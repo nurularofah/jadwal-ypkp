@@ -16,13 +16,21 @@
                             <a href="<?php echo base_url().'pengaturan';?>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-table fa-fw"></i> Data Master<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-edit fa-fw"></i> Data Master<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="<?php echo base_url().'pengaturan/dosen'; ?>">Dosen</a>
                                 </li>
                                 <li>
                                     <a href="<?php echo base_url().'pengaturan/matakuliah'; ?>">Matakuliah</a>
+                                </li>
+                                
+                            </ul>
+                            <!-- /.nav-second-level -->
+                            <a href="#"><i class="fa fa-table fa-fw"></i> Jadwal<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="<?php echo base_url().'pengaturan/jadwalmatakuliah'; ?>">Jadwal Matakuliah</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
