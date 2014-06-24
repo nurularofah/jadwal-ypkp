@@ -32,7 +32,7 @@ SET character_set_client = utf8;
   `sks` tinyint NOT NULL,
   `jam` tinyint NOT NULL,
   `ruangan` tinyint NOT NULL,
-  `nm_dosen` tinyint NOT NULL
+  `dosen` tinyint NOT NULL
 ) ENGINE=MyISAM */;
 SET character_set_client = @saved_cs_client;
 
@@ -50,7 +50,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`roni`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `vjadwalmatakuliah` AS select `hj`.`kd_head_jadwal` AS `kode`,`dj`.`hari` AS `hari`,`m`.`nm_matkul` AS `matakuliah`,`m`.`sks` AS `sks`,concat(`dj`.`jammulai`,' - ',`dj`.`jamakhir`) AS `jam`,`r`.`nm_ruang` AS `ruangan`,`d`.`nm_dosen` AS `nm_dosen` from ((((`usb_jadwalmatkul` `hj` join `usb_detail_jadwalmatkul` `dj` on((`hj`.`kd_head_jadwal` = `dj`.`kd_head_jadwal`))) join `usb_matkul` `m` on((`dj`.`kd_matkul` = `m`.`kd_matkul`))) join `usb_ruang` `r` on((`dj`.`kd_ruang` = `r`.`kd_ruang`))) join `usb_dosen` `d` on((`dj`.`nip` = `d`.`nip`))) */;
+/*!50001 VIEW `vjadwalmatakuliah` AS select `hj`.`kd_head_jadwal` AS `kode`,`dj`.`hari` AS `hari`,`m`.`nm_matkul` AS `matakuliah`,`m`.`sks` AS `sks`,concat(`dj`.`jammulai`,' - ',`dj`.`jamakhir`) AS `jam`,`r`.`nm_ruang` AS `ruangan`,`d`.`nm_dosen` AS `dosen` from ((((`usb_jadwalmatkul` `hj` join `usb_detail_jadwalmatkul` `dj` on((`hj`.`kd_head_jadwal` = `dj`.`kd_head_jadwal`))) join `usb_matkul` `m` on((`dj`.`kd_matkul` = `m`.`kd_matkul`))) join `usb_ruang` `r` on((`dj`.`kd_ruang` = `r`.`kd_ruang`))) join `usb_dosen` `d` on((`dj`.`nip` = `d`.`nip`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -64,4 +64,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-06-24 10:24:12
+-- Dump completed on 2014-06-24 10:58:59

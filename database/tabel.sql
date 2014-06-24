@@ -124,6 +124,7 @@ CREATE TABLE `usb_kelas` (
 
 LOCK TABLES `usb_kelas` WRITE;
 /*!40000 ALTER TABLE `usb_kelas` DISABLE KEYS */;
+INSERT INTO `usb_kelas` VALUES ('1R','Regular 1','IF','TI');
 /*!40000 ALTER TABLE `usb_kelas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -290,7 +291,7 @@ CREATE TABLE `usb_semester` (
   `kd_smstr` int(11) NOT NULL AUTO_INCREMENT,
   `keterangan` varchar(30) NOT NULL,
   PRIMARY KEY (`kd_smstr`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -299,6 +300,7 @@ CREATE TABLE `usb_semester` (
 
 LOCK TABLES `usb_semester` WRITE;
 /*!40000 ALTER TABLE `usb_semester` DISABLE KEYS */;
+INSERT INTO `usb_semester` VALUES (1,'Semester 1');
 /*!40000 ALTER TABLE `usb_semester` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -322,6 +324,7 @@ CREATE TABLE `usb_prodi` (
 
 LOCK TABLES `usb_prodi` WRITE;
 /*!40000 ALTER TABLE `usb_prodi` DISABLE KEYS */;
+INSERT INTO `usb_prodi` VALUES ('TI','Teknik Informatika');
 /*!40000 ALTER TABLE `usb_prodi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -355,6 +358,7 @@ CREATE TABLE `usb_jadwalmatkul` (
 
 LOCK TABLES `usb_jadwalmatkul` WRITE;
 /*!40000 ALTER TABLE `usb_jadwalmatkul` DISABLE KEYS */;
+INSERT INTO `usb_jadwalmatkul` VALUES ('1',2014,'IF','TI','1R',1);
 /*!40000 ALTER TABLE `usb_jadwalmatkul` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -373,6 +377,7 @@ CREATE TABLE `usb_detail_jadwalmatkul` (
   `nip` varchar(6) NOT NULL,
   `kd_matkul` varchar(6) NOT NULL,
   `kd_ruang` varchar(6) NOT NULL,
+  PRIMARY KEY (`kd_head_jadwal`),
   KEY `fk_usb_detail_jadwalmatkul_usb_dosen1_idx` (`nip`),
   KEY `fk_usb_detail_jadwalmatkul_usb_matkul1_idx` (`kd_matkul`),
   KEY `fk_usb_detail_jadwalmatkul_usb_ruang1_idx` (`kd_ruang`),
@@ -388,6 +393,7 @@ CREATE TABLE `usb_detail_jadwalmatkul` (
 
 LOCK TABLES `usb_detail_jadwalmatkul` WRITE;
 /*!40000 ALTER TABLE `usb_detail_jadwalmatkul` DISABLE KEYS */;
+INSERT INTO `usb_detail_jadwalmatkul` VALUES ('1','SENIN','00:00:07','00:00:09','100001','A01','R1');
 /*!40000 ALTER TABLE `usb_detail_jadwalmatkul` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -471,6 +477,7 @@ CREATE TABLE `usb_ruang` (
 
 LOCK TABLES `usb_ruang` WRITE;
 /*!40000 ALTER TABLE `usb_ruang` DISABLE KEYS */;
+INSERT INTO `usb_ruang` VALUES ('R1','Ruangan 1',40,'Ruang Teori','G1');
 /*!40000 ALTER TABLE `usb_ruang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -494,6 +501,7 @@ CREATE TABLE `usb_lokasi` (
 
 LOCK TABLES `usb_lokasi` WRITE;
 /*!40000 ALTER TABLE `usb_lokasi` DISABLE KEYS */;
+INSERT INTO `usb_lokasi` VALUES ('G1','Gedung 1');
 /*!40000 ALTER TABLE `usb_lokasi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -521,6 +529,7 @@ CREATE TABLE `usb_jurusan` (
 
 LOCK TABLES `usb_jurusan` WRITE;
 /*!40000 ALTER TABLE `usb_jurusan` DISABLE KEYS */;
+INSERT INTO `usb_jurusan` VALUES ('IF','Informatika',4,'TI');
 /*!40000 ALTER TABLE `usb_jurusan` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -533,4 +542,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-06-24 10:23:48
+-- Dump completed on 2014-06-24 10:58:48
