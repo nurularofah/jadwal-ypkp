@@ -25,6 +25,7 @@
     <script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
     <script src="<?php echo base_url('assets/js/proses/dosen.js');?>"></script>
     <script src="<?php echo base_url('assets/js/proses/matakuliah.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/proses/jadwalmatakuliah.js');?>"></script>
 
 </body>
 </html>
