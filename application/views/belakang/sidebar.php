@@ -28,6 +28,9 @@
                                     <a href="<?php echo base_url().'pengaturan/matakuliah'; ?>">Matakuliah</a>
                                 </li>
                                 <li>
+                                    <a href="<?php echo base_url().'pengaturan/semester'; ?>">Semester</a>
+                                </li>
+                                <li>
                                     <a href="<?php echo base_url().'pengaturan/lokasi'; ?>">Lokasi</a>
                                 </li>                                
                             </ul>

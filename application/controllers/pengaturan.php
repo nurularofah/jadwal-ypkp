@@ -200,6 +200,41 @@ class Pengaturan extends CI_Controller {
 	}
 
 
+	// CRUD SEMESTER
+	public function semester()
+	{
+		$data['records']=$this->msemester->getAllSemester();
+		$data['title']="Semester";
+		$data['maincontent']="belakang/form/semester";
+		$this->load->view('belakang/template', $data);
+	}
+
+	public function TambahSemester()
+	{
+		$kode=$this->input->post('kd_smstr');
+		$keterangan=$this->input->post('keterangan');		
+
+		$dt=array(
+			'kd_smstr' => $kode,
+			'keterangan' => $keterangan
+		);
+		$this->msemester->tambahSemester($dt);		
+	}
+
+	public function UbahSemester()
+	{
+		$tmp=array(
+			'keterangan' => $this->input->post('keterangan')
+		);
+		$kode=$this->input->post('kode');
+		$this->msemester->ubahSemester($kode,$tmp);
+	}
+
+	public function HapusSemester()
+	{
+		$kode=$this->input->post('kode');
+		$this->msemester->hapusSemester($kode);
+	}
 
 
 
