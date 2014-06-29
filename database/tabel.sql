@@ -291,7 +291,7 @@ CREATE TABLE `usb_semester` (
   `kd_smstr` int(11) NOT NULL AUTO_INCREMENT,
   `keterangan` varchar(30) NOT NULL,
   PRIMARY KEY (`kd_smstr`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -300,7 +300,7 @@ CREATE TABLE `usb_semester` (
 
 LOCK TABLES `usb_semester` WRITE;
 /*!40000 ALTER TABLE `usb_semester` DISABLE KEYS */;
-INSERT INTO `usb_semester` VALUES (1,'Semester 1');
+INSERT INTO `usb_semester` VALUES (1,'Semester 1'),(2,'Semester 2'),(3,'Semester 3'),(4,'Semester 4'),(5,'Semester 5'),(6,'Semester 6'),(7,'Semester 7'),(8,'Semester 8');
 /*!40000 ALTER TABLE `usb_semester` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -324,7 +324,7 @@ CREATE TABLE `usb_prodi` (
 
 LOCK TABLES `usb_prodi` WRITE;
 /*!40000 ALTER TABLE `usb_prodi` DISABLE KEYS */;
-INSERT INTO `usb_prodi` VALUES ('TI','Teknik Informatika');
+INSERT INTO `usb_prodi` VALUES ('KA','Komputer Akuntansi'),('MI','Manajemen Informatika'),('TI','Teknik Informatika');
 /*!40000 ALTER TABLE `usb_prodi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -501,7 +501,7 @@ CREATE TABLE `usb_lokasi` (
 
 LOCK TABLES `usb_lokasi` WRITE;
 /*!40000 ALTER TABLE `usb_lokasi` DISABLE KEYS */;
-INSERT INTO `usb_lokasi` VALUES ('G1','Gedung 1');
+INSERT INTO `usb_lokasi` VALUES ('G1','Gedung 1'),('G2','Gedung 2'),('G3','Gedung 3'),('G4','Gedung 4'),('G5','Gedung 5');
 /*!40000 ALTER TABLE `usb_lokasi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -542,4 +542,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-06-24 10:58:48
+-- Dump completed on 2014-06-29 14:18:56

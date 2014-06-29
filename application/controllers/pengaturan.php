@@ -200,6 +200,50 @@ class Pengaturan extends CI_Controller {
 	}
 
 
+
+
+
+	// CRUD JURUSAN
+	public function jurusan()
+	{
+		$data['records']=$this->mjurusan->getAllJurusan();
+		$data['title']="Jurusan";
+		$data['prodi']=$this->mprodi->getAllProdi();
+		$data['maincontent']="belakang/form/jurusan";
+		$this->load->view('belakang/template', $data);
+	}
+
+	public function TambahJurusan()
+	{
+		$kode=$this->input->post('kode');
+		$prodi=$this->input->post('prodi');		
+
+		$dt=array(
+			'kd_prodi' => $kode,
+			'nm_prodi' => $prodi
+		);
+		$this->mprodi->tambahProdi($dt);		
+	}
+
+	public function UbahJurusan()
+	{
+		$tmp=array(
+			'nm_prodi' => $this->input->post('prodi')
+		);
+		$kode=$this->input->post('kode');
+		$this->mprodi->ubahProdi($kode,$tmp);
+	}
+
+	public function HapusJurusan()
+	{
+		$kode=$this->input->post('kode');
+		$this->mprodi->hapusProdi($kode);
+	}
+
+
+
+
+
 	// CRUD SEMESTER
 	public function semester()
 	{
