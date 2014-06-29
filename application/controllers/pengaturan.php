@@ -17,6 +17,7 @@ class Pengaturan extends CI_Controller {
 
 
 
+
 	// CRUD DOSEN
 	public function dosen()
 	{
@@ -79,8 +80,6 @@ class Pengaturan extends CI_Controller {
 
 
 
-
-
 	// CRUD MATAKULIAH
 	public function matakuliah()
 	{
@@ -124,7 +123,6 @@ class Pengaturan extends CI_Controller {
 
 
 
-
 	// CRUD LOKASI
 	public function lokasi()
 	{
@@ -160,6 +158,47 @@ class Pengaturan extends CI_Controller {
 		$kode=$this->input->post('kode');
 		$this->mlokasi->hapusLokasi($kode);
 	}
+
+
+
+
+
+	// CRUD PRODI
+	public function prodi()
+	{
+		$data['records']=$this->mprodi->getAllProdi();
+		$data['title']="Prodi";
+		$data['maincontent']="belakang/form/prodi";
+		$this->load->view('belakang/template', $data);
+	}
+
+	public function TambahProdi()
+	{
+		$kode=$this->input->post('kode');
+		$prodi=$this->input->post('prodi');		
+
+		$dt=array(
+			'kd_prodi' => $kode,
+			'nm_prodi' => $prodi
+		);
+		$this->mprodi->tambahProdi($dt);		
+	}
+
+	public function UbahProdi()
+	{
+		$tmp=array(
+			'nm_prodi' => $this->input->post('prodi')
+		);
+		$kode=$this->input->post('kode');
+		$this->mprodi->ubahProdi($kode,$tmp);
+	}
+
+	public function HapusProdi()
+	{
+		$kode=$this->input->post('kode');
+		$this->mprodi->hapusProdi($kode);
+	}
+
 
 
 

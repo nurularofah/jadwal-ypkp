@@ -19,6 +19,9 @@
                             <a href="#"><i class="fa fa-edit fa-fw"></i> Data Master<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
+                                    <a href="<?php echo base_url().'pengaturan/prodi'; ?>">Prodi</a>
+                                </li>
+                                <li>
                                     <a href="<?php echo base_url().'pengaturan/dosen'; ?>">Dosen</a>
                                 </li>
                                 <li>
@@ -26,7 +29,7 @@
                                 </li>
                                 <li>
                                     <a href="<?php echo base_url().'pengaturan/lokasi'; ?>">Lokasi</a>
-                                </li>
+                                </li>                                
                             </ul>
                             <!-- /.nav-second-level -->
                             <a href="#"><i class="fa fa-table fa-fw"></i> Jadwal<span class="fa arrow"></span></a>
