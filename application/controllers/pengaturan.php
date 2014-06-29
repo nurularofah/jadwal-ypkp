@@ -78,6 +78,9 @@ class Pengaturan extends CI_Controller {
 
 
 
+
+
+
 	// CRUD MATAKULIAH
 	public function matakuliah()
 	{
@@ -116,6 +119,49 @@ class Pengaturan extends CI_Controller {
 		$kode=$this->input->post('kode');
 		$this->mmatakuliah->hapusMatkul($kode);
 	}
+
+
+
+
+
+
+	// CRUD LOKASI
+	public function lokasi()
+	{
+		$data['records']=$this->mlokasi->getAllLokasi();
+		$data['title']="Lokasi";
+		$data['maincontent']="belakang/form/lokasi";
+		$this->load->view('belakang/template', $data);
+	}
+
+	public function TambahLokasi()
+	{
+		$kode=$this->input->post('kode');
+		$lokasi=$this->input->post('lokasi');		
+
+		$dt=array(
+			'kd_lokasi' => $kode,
+			'nm_lokasi' => $lokasi
+		);
+		$this->mlokasi->tambahLokasi($dt);		
+	}
+
+	public function UbahLokasi()
+	{
+		$tmp=array(
+			'nm_lokasi' => $this->input->post('lokasi')
+		);
+		$kode=$this->input->post('kode');
+		$this->mlokasi->ubahLokasi($kode,$tmp);
+	}
+
+	public function HapusLokasi()
+	{
+		$kode=$this->input->post('kode');
+		$this->mlokasi->hapusLokasi($kode);
+	}
+
+
 
 
 	// CRUD JADWAL MATAKULIAH
