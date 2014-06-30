@@ -299,11 +299,11 @@ class Pengaturan extends CI_Controller {
 
 	public function TambahRuangan()
 	{
-		$kode=$this->input->post('kd_ruang');
-		$ruangan=$this->input->post('nm_ruang');		
+		$kode=$this->input->post('kode');
+		$ruangan=$this->input->post('ruangan');		
 		$kapasitas=$this->input->post('kapasitas');		
-		$jenis=$this->input->post('jenis_ruang');		
-		$lokasi=$this->input->post('kd_lokasi');		
+		$jenis=$this->input->post('jenis');		
+		$lokasi=$this->input->post('lokasi');		
 
 		$dt=array(
 			'kd_ruang' => $kode,
@@ -330,7 +330,7 @@ class Pengaturan extends CI_Controller {
 	public function HapusRuangan()
 	{
 		$kd=$this->input->post('kode');
-		$this->mruangan->HapusRuangan($kode);
+		$this->mruangan->HapusRuangan($kd);
 	}
 
 

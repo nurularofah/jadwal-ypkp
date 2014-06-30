@@ -22,11 +22,11 @@ $(document).ready(function() {
           show: true
         });
 
-        document.getElementById("tkode1").value=tkode;
-        document.getElementById("truangan1").value=truangan;
-        document.getElementById("tkapasitas1").value=tkapasitas;
-        document.getElementById("tjenis1").value=tjenis;
-        document.getElementById("tlokasi1").value=tlokasi;
+        document.getElementById("tkode").value=tkode;
+        document.getElementById("truangan").value=truangan;
+        document.getElementById("tkapasitas").value=tkapasitas;
+        document.getElementById("tjenis").value=tjenis;
+        document.getElementById("tlokasi").value=tlokasi;
     } );
 
     $("#bSimpanRuangan").click(function(){
@@ -54,6 +54,44 @@ $(document).ready(function() {
     } );
 
 
+    $("#bUbahRuangan").click(function(){
+        var kode=$("#tkode").val();
+        var ruangan=$("#truangan").val();
+        var kapasitas=$("#tkapasitas").val();
+        var jenis=$("#tjenis").val();
+        var lokasi=$("#tlokasi").val();
 
+        $.ajax({
+            url: "UbahRuangan",
+            type: "POST",
+            data:{
+                kode:kode,
+                ruangan:ruangan,
+                kapasitas:kapasitas,
+                jenis:jenis,
+                lokasi:lokasi
+            },
+            cache: false,
+            success: function(){
+                
+            }
+        });  
+    } );
 
-} );
+    $("#bHapusRuangan").click(function(){
+        var kode=$("#tkode").val();
+
+        $.ajax({
+            url: "HapusRuangan",
+            type: "POST",
+            data:{
+                kode:kode
+            },
+            cache: false,
+            success: function(){
+                
+            }
+        });
+    });
+
+});
