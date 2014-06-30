@@ -342,6 +342,13 @@ class Pengaturan extends CI_Controller {
 		$data['maincontent']="belakang/form/jadwalmatakuliah";
 		$this->load->view('belakang/template', $data);
 	}
+
+	public function vjadwal()
+	{		
+		$data['title']="[Tambah] Jadwal Matakuliah";
+		$data['maincontent']="belakang/form/vjadwal";
+		$this->load->view('belakang/template', $data);
+	}
 }
 
 /* End of file pengaturan.php */

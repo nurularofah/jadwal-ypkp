@@ -192,18 +192,42 @@
 	"buffers":
 	[
 		{
-			"file": "application/config/autoload.php",
+			"file": "/C/xampp/htdocs/perpustakaan/application/views/peminjaman/index.php",
 			"settings":
 			{
-				"buffer_size": 3205,
+				"buffer_size": 10282,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/belakang/form/vjadwal.php",
+			"settings":
+			{
+				"buffer_size": 2357,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "assets/js/proses/dosen.js",
+			"file": "application/controllers/pengaturan.php",
 			"settings":
 			{
-				"buffer_size": 4043,
+				"buffer_size": 7882,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/js/proses/jadwalmatakuliah.js",
+			"settings":
+			{
+				"buffer_size": 3040,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/models/mjadwalmatakuliah.php",
+			"settings":
+			{
+				"buffer_size": 542,
 				"line_ending": "Windows"
 			}
 		},
@@ -216,18 +240,10 @@
 			}
 		},
 		{
-			"file": "application/models/mdosen.php",
+			"file": "application/views/belakang/form/jadwalmatakuliah.php",
 			"settings":
 			{
-				"buffer_size": 734,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/controllers/pengaturan.php",
-			"settings":
-			{
-				"buffer_size": 7714,
+				"buffer_size": 4881,
 				"line_ending": "Windows"
 			}
 		}
@@ -288,36 +304,41 @@
 	},
 	"file_history":
 	[
+		"/C/xampp/htdocs/perpustakaan/application/views/anggota/index.php",
+		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/dosen.php",
+		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/sidebar.php",
+		"/C/xampp/htdocs/jadwal-ypkp/index.php",
+		"/C/xampp/htdocs/jadwal-ypkp/application/config/database.php",
+		"/C/xampp/htdocs/jadwal-ypkp/application/models/mruangan.php",
+		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/ruangan.js",
+		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/ruangan.php",
+		"/C/xampp/htdocs/jadwal-ypkp/database/tabel.sql",
+		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/footer.php",
+		"/C/xampp/htdocs/jadwal-ypkp/database/view.sql",
+		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/prodi.js",
+		"/C/xampp/htdocs/jadwal-ypkp/application/controllers/pengaturan.php",
+		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/jurusan.php",
+		"/C/xampp/htdocs/jadwal-ypkp/application/models/mdosen.php",
+		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/dosen.js",
+		"/C/xampp/htdocs/jadwal-ypkp/application/config/autoload.php",
 		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/jadwalmatakuliah.js",
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/mjadwalmatakuliah.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/jadwalmatakuliah.php",
-		"/C/xampp/htdocs/jadwal-ypkp/application/controllers/pengaturan.php",
-		"/C/xampp/htdocs/jadwal-ypkp/application/models/mruangan.php",
-		"/C/xampp/htdocs/jadwal-ypkp/application/models/mdosen.php",
-		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/ruangan.php",
-		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/ruangan.js",
 		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/jurusan.js",
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/mjurusan.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/semester.php",
-		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/jurusan.php",
 		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/lokasi.js",
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/msemester.php",
 		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/semester.js",
 		"/C/xampp/htdocs/jadwal-ypkp/assets/tables.html",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/prodi.php",
-		"/C/xampp/htdocs/jadwal-ypkp/application/config/autoload.php",
 		"/C/xampp/htdocs/perpustakaan/application/views/peminjaman/index.php",
 		"/C/xampp/htdocs/perpustakaan/application/controllers/peminjaman.php",
 		"/C/xampp/htdocs/perpustakaan/application/views/peminjaman/pencarianbuku.php",
 		"/C/xampp/htdocs/perpustakaan/application/views/peminjaman/tampil.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/lokasi.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/mlokasi.php",
-		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/footer.php",
-		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/sidebar.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/mprodi.php",
-		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/prodi.js",
-		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/dosen.php",
-		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/dosen.js",
 		"/C/xampp/htdocs/saungbaju/boss_reconfig.php",
 		"/C/xampp/htdocs/jadwal-ypkp/assets/panels-wells.html",
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/mmatakuliah.php",
@@ -388,9 +409,7 @@
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/dashboard.php",
 		"/C/xampp/htdocs/jadwal-ypkp/assets/index.html",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/index.html",
-		"/C/xampp/htdocs/jadwal-ypkp/index.php",
 		"/C/xampp/htdocs/sik-hb/application/backend/config/database.php",
-		"/C/xampp/htdocs/jadwal-ypkp/application/config/database.php",
 		"/C/xampp/htdocs/jadwal-ypkp/LICENSE",
 		"/C/xampp/htdocs/ci/system/.htaccess",
 		"/C/xampp/htdocs/ci/.htaccess",
@@ -412,10 +431,7 @@
 		"/C/xampp/htdocs/sik-hb/application/frontend/rawatjalan/RJpasien.js",
 		"/C/xampp/htdocs/sik-hb/application/frontend/rawatjalan/RJregistrasi.js",
 		"/C/xampp/htdocs/sik-hb/application/frontend/master/data/Mtppelayanan.js",
-		"/C/xampp/htdocs/sik-hb/application/frontend/rawatinap/RIpasien.js",
-		"/C/xampp/htdocs/sik-hb/application/frontend/store/DataMaster.js",
-		"/C/xampp/htdocs/sik-hb/application/frontend/dashboard/dashboard_index.js",
-		"/C/xampp/htdocs/sik-hb/application/frontend/rekammedis/RMregistrasi.js"
+		"/C/xampp/htdocs/sik-hb/application/frontend/rawatinap/RIpasien.js"
 	],
 	"find":
 	{
@@ -433,6 +449,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"usb_ruang",
+			"ruang",
 			"bSimpan",
 			"tblLokasi",
 			"example",
@@ -558,9 +576,7 @@
 			"ds_history",
 			"norm",
 			"tNoRM",
-			"ext.getCmp",
-			"reload",
-			"tnorm"
+			"ext.getCmp"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -584,33 +600,57 @@
 	"groups":
 	[
 		{
-			"sheets":
-			[
-			]
-		},
-		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "application/config/autoload.php",
+					"file": "/C/xampp/htdocs/perpustakaan/application/views/peminjaman/index.php",
 					"settings":
 					{
-						"buffer_size": 3205,
+						"buffer_size": 10282,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2307,
-								2307
+								7967,
+								7986
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage"
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2862.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/views/belakang/form/vjadwal.php",
+					"settings":
+					{
+						"buffer_size": 2357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								741,
+								741
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -619,19 +659,46 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "assets/js/proses/dosen.js",
+					"buffer": 2,
+					"file": "application/controllers/pengaturan.php",
 					"settings":
 					{
-						"buffer_size": 4043,
+						"buffer_size": 7882,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								105,
-								105
+								7670,
+								7670
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5885.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "assets/js/proses/jadwalmatakuliah.js",
+					"settings":
+					{
+						"buffer_size": 3040,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								501,
+								501
 							]
 						],
 						"settings":
@@ -647,7 +714,34 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 4,
+					"file": "application/models/mjadwalmatakuliah.php",
+					"settings":
+					{
+						"buffer_size": 542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "application/views/belakang/form/dosen.php",
 					"settings":
 					{
@@ -658,8 +752,8 @@
 						"selection":
 						[
 							[
-								169,
-								171
+								2361,
+								2421
 							]
 						],
 						"settings":
@@ -668,52 +762,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 702.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "application/models/mdosen.php",
+					"buffer": 6,
+					"file": "application/views/belakang/form/jadwalmatakuliah.php",
 					"settings":
 					{
-						"buffer_size": 734,
+						"buffer_size": 4881,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								474,
-								474
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "application/controllers/pengaturan.php",
-					"settings":
-					{
-						"buffer_size": 7714,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								181,
-								181
+								0,
+								4881
 							]
 						],
 						"settings":
@@ -747,18 +814,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.414348462665,
 			1.0
 		],
 		"rows":
@@ -779,16 +839,84 @@
 		"selected_items":
 		[
 			[
+				"dosen",
+				"application/views/belakang/form/dosen.php"
+			],
+			[
+				"mjad",
+				"application/models/mjadwalmatakuliah.php"
+			],
+			[
+				"jadwalmat",
+				"assets/js/proses/jadwalmatakuliah.js"
+			],
+			[
+				"side",
+				"application/views/belakang/sidebar.php"
+			],
+			[
+				"database",
+				"application/config/database.php"
+			],
+			[
+				"foote",
+				"jadwal-ypkp/application/views/belakang/footer.php"
+			],
+			[
+				"peng",
+				"jadwal-ypkp/application/controllers/pengaturan.php"
+			],
+			[
+				"view",
+				"jadwal-ypkp/database/view.sql"
+			],
+			[
+				"mruangan",
+				"jadwal-ypkp/application/models/mruangan.php"
+			],
+			[
+				"mrua",
+				"jadwal-ypkp/application/models/mruangan.php"
+			],
+			[
+				"ruang",
+				"jadwal-ypkp/assets/js/proses/ruangan.js"
+			],
+			[
+				"ruanga",
+				"jadwal-ypkp/application/views/belakang/form/ruangan.php"
+			],
+			[
+				".sql",
+				"jadwal-ypkp/database/tabel.sql"
+			],
+			[
+				"",
+				"jadwal-ypkp/application/views/belakang/form/jurusan.php"
+			],
+			[
+				"jurusan",
+				"jadwal-ypkp/application/views/belakang/form/jurusan.php"
+			],
+			[
+				"prodi",
+				"jadwal-ypkp/assets/js/proses/prodi.js"
+			],
+			[
+				"ruangan",
+				"jadwal-ypkp/application/views/belakang/form/ruangan.php"
+			],
+			[
+				"footer",
+				"jadwal-ypkp/application/views/belakang/footer.php"
+			],
+			[
 				"pen",
 				"jadwal-ypkp/application/controllers/pengaturan.php"
 			],
 			[
 				"mdose",
 				"jadwal-ypkp/application/models/mdosen.php"
-			],
-			[
-				"dosen",
-				"jadwal-ypkp/application/views/belakang/form/dosen.php"
 			],
 			[
 				"jadwal",
@@ -807,10 +935,6 @@
 				"jadwal-ypkp/application/models/mdosen.php"
 			],
 			[
-				"ruanga",
-				"jadwal-ypkp/application/views/belakang/form/ruangan.php"
-			],
-			[
 				"lokasi",
 				"jadwal-ypkp/assets/js/proses/lokasi.js"
 			],
@@ -821,14 +945,6 @@
 			[
 				"mjurusan",
 				"jadwal-ypkp/application/models/mjurusan.php"
-			],
-			[
-				"prodi",
-				"jadwal-ypkp/application/views/belakang/form/prodi.php"
-			],
-			[
-				"jurusan",
-				"jadwal-ypkp/assets/js/proses/jurusan.js"
 			],
 			[
 				"semester",
@@ -843,19 +959,11 @@
 				"application/views/belakang/footer.php"
 			],
 			[
-				"side",
-				"application/views/belakang/sidebar.php"
-			],
-			[
 				"sid",
 				"application/views/belakang/sidebar.php"
 			],
 			[
 				"foo",
-				"application/views/belakang/footer.php"
-			],
-			[
-				"foote",
 				"application/views/belakang/footer.php"
 			],
 			[
@@ -915,16 +1023,8 @@
 				"bootstrap/css/bootstrap.min.css"
 			],
 			[
-				"",
-				"application/views/depan/beranda.php"
-			],
-			[
 				"dtabase",
 				"application/backend/config/database.php"
-			],
-			[
-				"database",
-				"jadwal-ypkp/application/config/database.php"
 			],
 			[
 				"dat",
@@ -1060,7 +1160,7 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 239.0,
 	"status_bar_visible": true
 }

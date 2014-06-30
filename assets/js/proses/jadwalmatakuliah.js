@@ -12,6 +12,12 @@ $(document).ready(function() {
         }
     } );
 
+    $(function(){
+        $("#ttahun").datepicker({
+            format:'yyyy'
+        });    
+    })
+
     $('#tblJadwalMatkul2 tbody').on('click', 'tr', function () {
         var tnip = $('td', this).eq(0).text();
 
