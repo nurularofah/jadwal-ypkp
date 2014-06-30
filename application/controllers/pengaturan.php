@@ -207,8 +207,8 @@ class Pengaturan extends CI_Controller {
 	public function jurusan()
 	{
 		$data['records']=$this->mjurusan->getAllJurusan();
-		$data['title']="Jurusan";
 		$data['prodi']=$this->mprodi->getAllProdi();
+		$data['title']="Jurusan";
 		$data['maincontent']="belakang/form/jurusan";
 		$this->load->view('belakang/template', $data);
 	}
@@ -216,32 +216,35 @@ class Pengaturan extends CI_Controller {
 	public function TambahJurusan()
 	{
 		$kode=$this->input->post('kode');
-		$prodi=$this->input->post('prodi');		
+		$jurusan=$this->input->post('jurusan');		
+		$jenjang=$this->input->post('jenjang');
+		$prodi=$this->input->post('prodi');
 
 		$dt=array(
-			'kd_prodi' => $kode,
-			'nm_prodi' => $prodi
+			'kd_jurusan' => $kode,
+			'nm_jurusan' => $jurusan,
+			'jenjang' => $jenjang,
+			'kd_prodi' => $prodi
 		);
-		$this->mprodi->tambahProdi($dt);		
+		$this->mjurusan->tambahJurusan($dt);		
 	}
 
 	public function UbahJurusan()
 	{
-		$tmp=array(
-			'nm_prodi' => $this->input->post('prodi')
+		$tmp=array(			
+			'nm_jurusan' => $this->input->post('jurusan'),
+			'jenjang' => $this->input->post('jenjang'),
+			'kd_prodi' => $this->input->post('prodi')
 		);
 		$kode=$this->input->post('kode');
-		$this->mprodi->ubahProdi($kode,$tmp);
+		$this->mjurusan->ubahJurusan($kode,$tmp);
 	}
 
 	public function HapusJurusan()
 	{
-		$kode=$this->input->post('kode');
-		$this->mprodi->hapusProdi($kode);
+		$kd=$this->input->post('kode');
+		$this->mjurusan->hapusJurusan($kd);
 	}
-
-
-
 
 
 	// CRUD SEMESTER
@@ -276,10 +279,59 @@ class Pengaturan extends CI_Controller {
 
 	public function HapusSemester()
 	{
-		$kode=$this->input->post('kode');
+		$kd=$this->input->post('kode');
 		$this->msemester->hapusSemester($kode);
 	}
 
+
+
+
+
+	// CRUD RUANGAN
+	public function ruangan()
+	{
+		$data['records']=$this->mruangan->getAllRuangan();
+		$data['lokasi']=$this->mlokasi->getAllLokasi();
+		$data['title']="Ruangan";
+		$data['maincontent']="belakang/form/ruangan";
+		$this->load->view('belakang/template', $data);
+	}
+
+	public function TambahRuangan()
+	{
+		$kode=$this->input->post('kd_ruang');
+		$ruangan=$this->input->post('nm_ruang');		
+		$kapasitas=$this->input->post('kapasitas');		
+		$jenis=$this->input->post('jenis_ruang');		
+		$lokasi=$this->input->post('kd_lokasi');		
+
+		$dt=array(
+			'kd_ruang' => $kode,
+			'nm_ruang' => $ruangan,
+			'kapasitas' => $kapasitas,
+			'jenis_ruang' => $jenis,
+			'kd_lokasi' => $lokasi
+		);
+		$this->mruangan->tambahRuangan($dt);		
+	}
+
+	public function UbahRuangan()
+	{
+		$tmp=array(
+			'nm_ruang' => $this->input->post('ruangan'),
+			'kapasitas' => $this->input->post('kapasitas'),
+			'jenis_ruang' => $this->input->post('jenis'),
+			'kd_lokasi' => $this->input->post('lokasi')
+		);
+		$kode=$this->input->post('kode');
+		$this->mruangan->ubahRuangan($kode,$tmp);
+	}
+
+	public function HapusRuangan()
+	{
+		$kd=$this->input->post('kode');
+		$this->mruangan->HapusRuangan($kode);
+	}
 
 
 	// CRUD JADWAL MATAKULIAH

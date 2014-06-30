@@ -74,8 +74,9 @@
 				            <tr>
 				                <td><?php echo $row->kd_jurusan; ?></td>
 				                <td><?php echo $row->nm_jurusan; ?></td>
-				                <td><?php echo $row->jenjang; ?></td>
+				                 <td><?php echo $row->jenjang; ?></td>
 				                <td><?php echo $row->kd_prodi; ?></td>
+				               
 				            </tr>
 				            <?php endforeach; ?>
 				        </tbody>
@@ -86,11 +87,12 @@
 					    <div class="modal-content">
 					      <div class="modal-header">
 					      	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>		        
-					        <h4 class="modal-title" id="myModalLabel">Ubah Data Lokasi</h4>
+					        <h4 class="modal-title" id="myModalLabel">Ubah Data Jurusan</h4>
 					      </div>
 					      <div class="modal-body">
-					      	<form action="" method="get" accept-charset="utf-8">
-					      		<div class="form-group">
+					      	<form action="" method="get" accept-charset="utf-8">					      		
+					      <div class="form-horizontal"> 
+					      <div class="form-group">
 				      				<label class="col-lg-3">Kode:</label>
 							        <div class="col-lg-8">
 							            <input type="text" id="tkode" class="form-control">
@@ -111,15 +113,18 @@
 								<div class="form-group">
 									<label class="col-lg-3">Prodi:</label>
 							        <div class="col-lg-8">
-							            <input type="text" id="tprodi" class="form-control">
+							            <select name="tprodi" class="form-control" id="tprodi">
+							            	<?php foreach ($prodi as $prod): ?>
+				                            <option value="<?php echo $prod->kd_prodi; ?>"><?php echo $prod->nm_prodi; ?></option>
+				                            <?php endforeach;?>
+				                        </select>
 							        </div>				  
-								</div>					      		
-					      	</form>		      	
+								</div>		      		     	
 					      </div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="glyphicon glyphicon-collapse-up"></i> Keluar</button>
 					        <button id="bHapusJurusan" type="button" class="btn btn-warning"><i class="glyphicon glyphicon-remove"></i> Hapus</button>
-				        <button id="bUbahJurusan" type="button" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> Ubah</button>
+				        	<button id="bUbahJurusan" type="button" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> Ubah</button>
 					      </div>
 					    </div>
 					  </div>

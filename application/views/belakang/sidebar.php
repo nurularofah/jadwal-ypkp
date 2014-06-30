@@ -35,6 +35,9 @@
                                 </li>
                                 <li>
                                     <a href="<?php echo base_url().'pengaturan/lokasi'; ?>">Lokasi</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo base_url().'pengaturan/ruangan'; ?>">Ruangan</a>
                                 </li>                                
                             </ul>
                             <!-- /.nav-second-level -->
