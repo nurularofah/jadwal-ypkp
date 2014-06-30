@@ -18,27 +18,34 @@ USE `jadwal-usb`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `usb_head_info_akademik`
+-- Table structure for table `usb_detail_info_akademik`
 --
 
-DROP TABLE IF EXISTS `usb_head_info_akademik`;
+DROP TABLE IF EXISTS `usb_detail_info_akademik`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_head_info_akademik` (
+CREATE TABLE `usb_detail_info_akademik` (
+  `kd_detail_infoakademik` varchar(6) NOT NULL,
+  `jammulai` time NOT NULL,
+  `jamakhir` time NOT NULL,
+  `status_dosen` varchar(15) NOT NULL,
   `kd_infoakademik` varchar(6) NOT NULL,
-  `tgl_infoakademik` date NOT NULL,
-  `jenis_info` int(11) NOT NULL,
-  PRIMARY KEY (`kd_infoakademik`)
+  `nip` varchar(6) NOT NULL,
+  PRIMARY KEY (`kd_detail_infoakademik`),
+  KEY `fk_usb_detail_info_akademik_usb_head_info_akademik1_idx` (`kd_infoakademik`),
+  KEY `fk_usb_detail_info_akademik_usb_dosen1_idx` (`nip`),
+  CONSTRAINT `fk_usb_detail_info_akademik_usb_dosen1` FOREIGN KEY (`nip`) REFERENCES `usb_dosen` (`nip`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usb_detail_info_akademik_usb_head_info_akademik1` FOREIGN KEY (`kd_infoakademik`) REFERENCES `usb_head_info_akademik` (`kd_infoakademik`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usb_head_info_akademik`
+-- Dumping data for table `usb_detail_info_akademik`
 --
 
-LOCK TABLES `usb_head_info_akademik` WRITE;
-/*!40000 ALTER TABLE `usb_head_info_akademik` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usb_head_info_akademik` ENABLE KEYS */;
+LOCK TABLES `usb_detail_info_akademik` WRITE;
+/*!40000 ALTER TABLE `usb_detail_info_akademik` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usb_detail_info_akademik` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -73,173 +80,6 @@ CREATE TABLE `usb_detail_info_jadwal_uas` (
 LOCK TABLES `usb_detail_info_jadwal_uas` WRITE;
 /*!40000 ALTER TABLE `usb_detail_info_jadwal_uas` DISABLE KEYS */;
 /*!40000 ALTER TABLE `usb_detail_info_jadwal_uas` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usb_matkul`
---
-
-DROP TABLE IF EXISTS `usb_matkul`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_matkul` (
-  `kd_matkul` varchar(6) NOT NULL,
-  `nm_matkul` varchar(30) NOT NULL,
-  `sks` int(11) NOT NULL,
-  PRIMARY KEY (`kd_matkul`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usb_matkul`
---
-
-LOCK TABLES `usb_matkul` WRITE;
-/*!40000 ALTER TABLE `usb_matkul` DISABLE KEYS */;
-INSERT INTO `usb_matkul` VALUES ('A01','Data Mining',2),('A02','Database Sertifikasi',2),('A03','Jaringan Komputer',2),('A04','Pemrograman Web',4),('A05','Artifical Intelegense',4),('A06','Profdev',2);
-/*!40000 ALTER TABLE `usb_matkul` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usb_kelas`
---
-
-DROP TABLE IF EXISTS `usb_kelas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_kelas` (
-  `kd_kelas` varchar(6) NOT NULL,
-  `nm_kelas` varchar(10) NOT NULL,
-  `kd_jurusan` varchar(6) NOT NULL,
-  `kd_prodi` varchar(6) NOT NULL,
-  PRIMARY KEY (`kd_kelas`),
-  KEY `fk_usb_kelas_usb_jurusan1_idx` (`kd_jurusan`,`kd_prodi`),
-  CONSTRAINT `fk_usb_kelas_usb_jurusan1` FOREIGN KEY (`kd_jurusan`) REFERENCES `usb_jurusan` (`kd_jurusan`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usb_kelas`
---
-
-LOCK TABLES `usb_kelas` WRITE;
-/*!40000 ALTER TABLE `usb_kelas` DISABLE KEYS */;
-INSERT INTO `usb_kelas` VALUES ('1R','Regular 1','IF','TI');
-/*!40000 ALTER TABLE `usb_kelas` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usb_info_jadwal_uas`
---
-
-DROP TABLE IF EXISTS `usb_info_jadwal_uas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_info_jadwal_uas` (
-  `kd_head_UAS` varchar(6) NOT NULL,
-  `tahun_UAS` year(4) NOT NULL,
-  `kd_kelas` varchar(6) NOT NULL,
-  `kd_smstr` int(11) NOT NULL,
-  PRIMARY KEY (`kd_head_UAS`),
-  KEY `fk_usb_info_jadwal_uas_usb_kelas1_idx` (`kd_kelas`),
-  KEY `fk_usb_info_jadwal_uas_usb_semester1_idx` (`kd_smstr`),
-  CONSTRAINT `fk_usb_info_jadwal_uas_usb_kelas1` FOREIGN KEY (`kd_kelas`) REFERENCES `usb_kelas` (`kd_kelas`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usb_info_jadwal_uas_usb_semester1` FOREIGN KEY (`kd_smstr`) REFERENCES `usb_semester` (`kd_smstr`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usb_info_jadwal_uas`
---
-
-LOCK TABLES `usb_info_jadwal_uas` WRITE;
-/*!40000 ALTER TABLE `usb_info_jadwal_uas` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usb_info_jadwal_uas` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usb_detail_info_akademik`
---
-
-DROP TABLE IF EXISTS `usb_detail_info_akademik`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_detail_info_akademik` (
-  `kd_detail_infoakademik` varchar(6) NOT NULL,
-  `jammulai` time NOT NULL,
-  `jamakhir` time NOT NULL,
-  `status_dosen` varchar(15) NOT NULL,
-  `kd_infoakademik` varchar(6) NOT NULL,
-  `nip` varchar(6) NOT NULL,
-  PRIMARY KEY (`kd_detail_infoakademik`),
-  KEY `fk_usb_detail_info_akademik_usb_head_info_akademik1_idx` (`kd_infoakademik`),
-  KEY `fk_usb_detail_info_akademik_usb_dosen1_idx` (`nip`),
-  CONSTRAINT `fk_usb_detail_info_akademik_usb_dosen1` FOREIGN KEY (`nip`) REFERENCES `usb_dosen` (`nip`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usb_detail_info_akademik_usb_head_info_akademik1` FOREIGN KEY (`kd_infoakademik`) REFERENCES `usb_head_info_akademik` (`kd_infoakademik`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usb_detail_info_akademik`
---
-
-LOCK TABLES `usb_detail_info_akademik` WRITE;
-/*!40000 ALTER TABLE `usb_detail_info_akademik` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usb_detail_info_akademik` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usb_staff`
---
-
-DROP TABLE IF EXISTS `usb_staff`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_staff` (
-  `no_staff` varchar(6) NOT NULL,
-  `nm_staff` varchar(25) NOT NULL,
-  `password` varchar(8) NOT NULL,
-  `fungsi` varchar(15) NOT NULL,
-  PRIMARY KEY (`no_staff`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usb_staff`
---
-
-LOCK TABLES `usb_staff` WRITE;
-/*!40000 ALTER TABLE `usb_staff` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usb_staff` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usb_head_info_jadwal_uts`
---
-
-DROP TABLE IF EXISTS `usb_head_info_jadwal_uts`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_head_info_jadwal_uts` (
-  `kd_head_UTS` varchar(6) NOT NULL,
-  `tahun_UTS` year(4) NOT NULL,
-  `kd_kelas` varchar(6) NOT NULL,
-  `kd_smstr` int(11) NOT NULL,
-  PRIMARY KEY (`kd_head_UTS`),
-  KEY `fk_usb_head_info_jadwal_uts_usb_kelas1_idx` (`kd_kelas`),
-  KEY `fk_usb_head_info_jadwal_uts_usb_semester2_idx` (`kd_smstr`),
-  CONSTRAINT `fk_usb_head_info_jadwal_uts_usb_kelas1` FOREIGN KEY (`kd_kelas`) REFERENCES `usb_kelas` (`kd_kelas`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usb_head_info_jadwal_uts_usb_semester2` FOREIGN KEY (`kd_smstr`) REFERENCES `usb_semester` (`kd_smstr`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usb_head_info_jadwal_uts`
---
-
-LOCK TABLES `usb_head_info_jadwal_uts` WRITE;
-/*!40000 ALTER TABLE `usb_head_info_jadwal_uts` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usb_head_info_jadwal_uts` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -281,51 +121,151 @@ LOCK TABLES `usb_detail_info_jadwal_uts` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `usb_semester`
+-- Table structure for table `usb_detail_jadwalmatkul`
 --
 
-DROP TABLE IF EXISTS `usb_semester`;
+DROP TABLE IF EXISTS `usb_detail_jadwalmatkul`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_semester` (
-  `kd_smstr` int(11) NOT NULL AUTO_INCREMENT,
-  `keterangan` varchar(30) NOT NULL,
-  PRIMARY KEY (`kd_smstr`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usb_semester`
---
-
-LOCK TABLES `usb_semester` WRITE;
-/*!40000 ALTER TABLE `usb_semester` DISABLE KEYS */;
-INSERT INTO `usb_semester` VALUES (1,'Semester 1'),(2,'Semester 2'),(3,'Semester 3'),(4,'Semester 4'),(5,'Semester 5'),(6,'Semester 6'),(7,'Semester 7'),(8,'Semester 8');
-/*!40000 ALTER TABLE `usb_semester` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usb_prodi`
---
-
-DROP TABLE IF EXISTS `usb_prodi`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_prodi` (
-  `kd_prodi` varchar(6) NOT NULL,
-  `nm_prodi` varchar(30) NOT NULL,
-  PRIMARY KEY (`kd_prodi`)
+CREATE TABLE `usb_detail_jadwalmatkul` (
+  `kd_head_jadwal` varchar(6) NOT NULL,
+  `hari` varchar(10) NOT NULL,
+  `jammulai` time NOT NULL,
+  `jamakhir` time NOT NULL,
+  `nip` varchar(6) NOT NULL,
+  `kd_matkul` varchar(6) NOT NULL,
+  `kd_ruang` varchar(6) NOT NULL,
+  PRIMARY KEY (`kd_head_jadwal`),
+  KEY `fk_usb_detail_jadwalmatkul_usb_dosen1_idx` (`nip`),
+  KEY `fk_usb_detail_jadwalmatkul_usb_matkul1_idx` (`kd_matkul`),
+  KEY `fk_usb_detail_jadwalmatkul_usb_ruang1_idx` (`kd_ruang`),
+  CONSTRAINT `fk_usb_detail_jadwalmatkul_usb_dosen1` FOREIGN KEY (`nip`) REFERENCES `usb_dosen` (`nip`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usb_detail_jadwalmatkul_usb_matkul1` FOREIGN KEY (`kd_matkul`) REFERENCES `usb_matkul` (`kd_matkul`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usb_detail_jadwalmatkul_usb_ruang1` FOREIGN KEY (`kd_ruang`) REFERENCES `usb_ruang` (`kd_ruang`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usb_prodi`
+-- Dumping data for table `usb_detail_jadwalmatkul`
 --
 
-LOCK TABLES `usb_prodi` WRITE;
-/*!40000 ALTER TABLE `usb_prodi` DISABLE KEYS */;
-INSERT INTO `usb_prodi` VALUES ('KA','Komputer Akuntansi'),('MI','Manajemen Informatika'),('TI','Teknik Informatika');
-/*!40000 ALTER TABLE `usb_prodi` ENABLE KEYS */;
+LOCK TABLES `usb_detail_jadwalmatkul` WRITE;
+/*!40000 ALTER TABLE `usb_detail_jadwalmatkul` DISABLE KEYS */;
+INSERT INTO `usb_detail_jadwalmatkul` VALUES ('1','SENIN','00:00:07','00:00:09','100001','A01','R1');
+/*!40000 ALTER TABLE `usb_detail_jadwalmatkul` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usb_dosen`
+--
+
+DROP TABLE IF EXISTS `usb_dosen`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usb_dosen` (
+  `nip` varchar(6) NOT NULL,
+  `nm_dosen` varchar(30) NOT NULL,
+  `jab_fungsional` varchar(20) NOT NULL,
+  `pendidikan` varchar(20) NOT NULL,
+  `tempat_lahir` varchar(30) NOT NULL,
+  `tgl_lahir` date NOT NULL,
+  `no_tlp` int(11) NOT NULL,
+  `no_hp` int(11) NOT NULL,
+  `alamat` text NOT NULL,
+  PRIMARY KEY (`nip`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usb_dosen`
+--
+
+LOCK TABLES `usb_dosen` WRITE;
+/*!40000 ALTER TABLE `usb_dosen` DISABLE KEYS */;
+INSERT INTO `usb_dosen` VALUES ('100001','roni','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100002','irawan','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100003','nurul','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100004','Nurul Arofah','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang');
+/*!40000 ALTER TABLE `usb_dosen` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usb_head_info_akademik`
+--
+
+DROP TABLE IF EXISTS `usb_head_info_akademik`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usb_head_info_akademik` (
+  `kd_infoakademik` varchar(6) NOT NULL,
+  `tgl_infoakademik` date NOT NULL,
+  `jenis_info` int(11) NOT NULL,
+  PRIMARY KEY (`kd_infoakademik`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usb_head_info_akademik`
+--
+
+LOCK TABLES `usb_head_info_akademik` WRITE;
+/*!40000 ALTER TABLE `usb_head_info_akademik` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usb_head_info_akademik` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usb_head_info_jadwal_uts`
+--
+
+DROP TABLE IF EXISTS `usb_head_info_jadwal_uts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usb_head_info_jadwal_uts` (
+  `kd_head_UTS` varchar(6) NOT NULL,
+  `tahun_UTS` year(4) NOT NULL,
+  `kd_kelas` varchar(6) NOT NULL,
+  `kd_smstr` int(11) NOT NULL,
+  PRIMARY KEY (`kd_head_UTS`),
+  KEY `fk_usb_head_info_jadwal_uts_usb_kelas1_idx` (`kd_kelas`),
+  KEY `fk_usb_head_info_jadwal_uts_usb_semester2_idx` (`kd_smstr`),
+  CONSTRAINT `fk_usb_head_info_jadwal_uts_usb_kelas1` FOREIGN KEY (`kd_kelas`) REFERENCES `usb_kelas` (`kd_kelas`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usb_head_info_jadwal_uts_usb_semester2` FOREIGN KEY (`kd_smstr`) REFERENCES `usb_semester` (`kd_smstr`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usb_head_info_jadwal_uts`
+--
+
+LOCK TABLES `usb_head_info_jadwal_uts` WRITE;
+/*!40000 ALTER TABLE `usb_head_info_jadwal_uts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usb_head_info_jadwal_uts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usb_info_jadwal_uas`
+--
+
+DROP TABLE IF EXISTS `usb_info_jadwal_uas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usb_info_jadwal_uas` (
+  `kd_head_UAS` varchar(6) NOT NULL,
+  `tahun_UAS` year(4) NOT NULL,
+  `kd_kelas` varchar(6) NOT NULL,
+  `kd_smstr` int(11) NOT NULL,
+  PRIMARY KEY (`kd_head_UAS`),
+  KEY `fk_usb_info_jadwal_uas_usb_kelas1_idx` (`kd_kelas`),
+  KEY `fk_usb_info_jadwal_uas_usb_semester1_idx` (`kd_smstr`),
+  CONSTRAINT `fk_usb_info_jadwal_uas_usb_kelas1` FOREIGN KEY (`kd_kelas`) REFERENCES `usb_kelas` (`kd_kelas`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usb_info_jadwal_uas_usb_semester1` FOREIGN KEY (`kd_smstr`) REFERENCES `usb_semester` (`kd_smstr`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usb_info_jadwal_uas`
+--
+
+LOCK TABLES `usb_info_jadwal_uas` WRITE;
+/*!40000 ALTER TABLE `usb_info_jadwal_uas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usb_info_jadwal_uas` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -363,38 +303,160 @@ INSERT INTO `usb_jadwalmatkul` VALUES ('1',2014,'IF','TI','1R',1);
 UNLOCK TABLES;
 
 --
--- Table structure for table `usb_detail_jadwalmatkul`
+-- Table structure for table `usb_jurusan`
 --
 
-DROP TABLE IF EXISTS `usb_detail_jadwalmatkul`;
+DROP TABLE IF EXISTS `usb_jurusan`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_detail_jadwalmatkul` (
-  `kd_head_jadwal` varchar(6) NOT NULL,
-  `hari` varchar(10) NOT NULL,
-  `jammulai` time NOT NULL,
-  `jamakhir` time NOT NULL,
-  `nip` varchar(6) NOT NULL,
-  `kd_matkul` varchar(6) NOT NULL,
-  `kd_ruang` varchar(6) NOT NULL,
-  PRIMARY KEY (`kd_head_jadwal`),
-  KEY `fk_usb_detail_jadwalmatkul_usb_dosen1_idx` (`nip`),
-  KEY `fk_usb_detail_jadwalmatkul_usb_matkul1_idx` (`kd_matkul`),
-  KEY `fk_usb_detail_jadwalmatkul_usb_ruang1_idx` (`kd_ruang`),
-  CONSTRAINT `fk_usb_detail_jadwalmatkul_usb_dosen1` FOREIGN KEY (`nip`) REFERENCES `usb_dosen` (`nip`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usb_detail_jadwalmatkul_usb_matkul1` FOREIGN KEY (`kd_matkul`) REFERENCES `usb_matkul` (`kd_matkul`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usb_detail_jadwalmatkul_usb_ruang1` FOREIGN KEY (`kd_ruang`) REFERENCES `usb_ruang` (`kd_ruang`) ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE `usb_jurusan` (
+  `kd_jurusan` varchar(6) NOT NULL,
+  `nm_jurusan` varchar(45) DEFAULT NULL,
+  `jenjang` varchar(45) DEFAULT NULL,
+  `kd_prodi` varchar(6) NOT NULL,
+  PRIMARY KEY (`kd_jurusan`),
+  KEY `fkProdi_idx` (`kd_prodi`),
+  CONSTRAINT `fkProdi` FOREIGN KEY (`kd_prodi`) REFERENCES `usb_prodi` (`kd_prodi`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usb_detail_jadwalmatkul`
+-- Dumping data for table `usb_jurusan`
 --
 
-LOCK TABLES `usb_detail_jadwalmatkul` WRITE;
-/*!40000 ALTER TABLE `usb_detail_jadwalmatkul` DISABLE KEYS */;
-INSERT INTO `usb_detail_jadwalmatkul` VALUES ('1','SENIN','00:00:07','00:00:09','100001','A01','R1');
-/*!40000 ALTER TABLE `usb_detail_jadwalmatkul` ENABLE KEYS */;
+LOCK TABLES `usb_jurusan` WRITE;
+/*!40000 ALTER TABLE `usb_jurusan` DISABLE KEYS */;
+INSERT INTO `usb_jurusan` VALUES ('MI','Manajemen Informatika','3 Tahun','MI'),('TI','Teknik Informatika','3 Tahun','TI');
+/*!40000 ALTER TABLE `usb_jurusan` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usb_kelas`
+--
+
+DROP TABLE IF EXISTS `usb_kelas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usb_kelas` (
+  `kd_kelas` varchar(6) NOT NULL,
+  `nm_kelas` varchar(10) NOT NULL,
+  `kd_jurusan` varchar(6) NOT NULL,
+  `kd_prodi` varchar(6) NOT NULL,
+  PRIMARY KEY (`kd_kelas`),
+  KEY `fk_usb_kelas_usb_jurusan1_idx` (`kd_jurusan`,`kd_prodi`),
+  CONSTRAINT `fk_usb_kelas_usb_jurusan1` FOREIGN KEY (`kd_jurusan`) REFERENCES `usb_jurusan` (`kd_jurusan`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usb_kelas`
+--
+
+LOCK TABLES `usb_kelas` WRITE;
+/*!40000 ALTER TABLE `usb_kelas` DISABLE KEYS */;
+INSERT INTO `usb_kelas` VALUES ('1R','Regular 1','IF','TI');
+/*!40000 ALTER TABLE `usb_kelas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usb_lokasi`
+--
+
+DROP TABLE IF EXISTS `usb_lokasi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usb_lokasi` (
+  `kd_lokasi` varchar(6) NOT NULL DEFAULT '',
+  `nm_lokasi` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`kd_lokasi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usb_lokasi`
+--
+
+LOCK TABLES `usb_lokasi` WRITE;
+/*!40000 ALTER TABLE `usb_lokasi` DISABLE KEYS */;
+INSERT INTO `usb_lokasi` VALUES ('G1','Gedung 1');
+/*!40000 ALTER TABLE `usb_lokasi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usb_matkul`
+--
+
+DROP TABLE IF EXISTS `usb_matkul`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usb_matkul` (
+  `kd_matkul` varchar(6) NOT NULL,
+  `nm_matkul` varchar(30) NOT NULL,
+  `sks` int(11) NOT NULL,
+  PRIMARY KEY (`kd_matkul`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usb_matkul`
+--
+
+LOCK TABLES `usb_matkul` WRITE;
+/*!40000 ALTER TABLE `usb_matkul` DISABLE KEYS */;
+INSERT INTO `usb_matkul` VALUES ('A01','Data Mining',2),('A02','Database Sertifikasi',2),('A03','Jaringan Komputer',2),('A04','Pemrograman Web',4),('A05','Artifical Intelegense',4),('A06','Profdev',2);
+/*!40000 ALTER TABLE `usb_matkul` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usb_prodi`
+--
+
+DROP TABLE IF EXISTS `usb_prodi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usb_prodi` (
+  `kd_prodi` varchar(6) NOT NULL,
+  `nm_prodi` varchar(30) NOT NULL,
+  PRIMARY KEY (`kd_prodi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usb_prodi`
+--
+
+LOCK TABLES `usb_prodi` WRITE;
+/*!40000 ALTER TABLE `usb_prodi` DISABLE KEYS */;
+INSERT INTO `usb_prodi` VALUES ('AN','Adminstrasi Niaga'),('KA','Komputer Akuntansi'),('MI','Manajemen Informatika'),('TI','Teknik Informatika');
+/*!40000 ALTER TABLE `usb_prodi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usb_ruangan`
+--
+
+DROP TABLE IF EXISTS `usb_ruangan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usb_ruangan` (
+  `kd_ruang` varchar(6) NOT NULL,
+  `nm_ruang` varchar(20) DEFAULT NULL,
+  `kapasitas` int(11) DEFAULT NULL,
+  `jenis_ruang` varchar(20) DEFAULT NULL,
+  `kd_lokasi` varchar(6) NOT NULL,
+  PRIMARY KEY (`kd_ruang`),
+  KEY `fkLokasi_idx` (`kd_lokasi`),
+  CONSTRAINT `fkLokasi` FOREIGN KEY (`kd_lokasi`) REFERENCES `usb_lokasi` (`kd_lokasi`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usb_ruangan`
+--
+
+LOCK TABLES `usb_ruangan` WRITE;
+/*!40000 ALTER TABLE `usb_ruangan` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usb_ruangan` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -422,115 +484,52 @@ LOCK TABLES `usb_running_text` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `usb_dosen`
+-- Table structure for table `usb_semester`
 --
 
-DROP TABLE IF EXISTS `usb_dosen`;
+DROP TABLE IF EXISTS `usb_semester`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_dosen` (
-  `nip` varchar(6) NOT NULL,
-  `nm_dosen` varchar(30) NOT NULL,
-  `jab_fungsional` varchar(20) NOT NULL,
-  `pendidikan` varchar(20) NOT NULL,
-  `tempat_lahir` varchar(30) NOT NULL,
-  `tgl_lahir` date NOT NULL,
-  `no_tlp` int(11) NOT NULL,
-  `no_hp` int(11) NOT NULL,
-  `alamat` text NOT NULL,
-  PRIMARY KEY (`nip`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `usb_semester` (
+  `kd_smstr` int(11) NOT NULL AUTO_INCREMENT,
+  `keterangan` varchar(30) NOT NULL,
+  PRIMARY KEY (`kd_smstr`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usb_dosen`
+-- Dumping data for table `usb_semester`
 --
 
-LOCK TABLES `usb_dosen` WRITE;
-/*!40000 ALTER TABLE `usb_dosen` DISABLE KEYS */;
-INSERT INTO `usb_dosen` VALUES ('100001','roni','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100002','irawan','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100003','nurul','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100004','Nurul Arofah','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang');
-/*!40000 ALTER TABLE `usb_dosen` ENABLE KEYS */;
+LOCK TABLES `usb_semester` WRITE;
+/*!40000 ALTER TABLE `usb_semester` DISABLE KEYS */;
+INSERT INTO `usb_semester` VALUES (1,'Semester 1'),(2,'Semester 2'),(3,'Semester 3'),(4,'Semester 4'),(5,'Semester 5'),(6,'Semester 6'),(7,'Semester 7'),(8,'Semester 8');
+/*!40000 ALTER TABLE `usb_semester` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `usb_ruang`
+-- Table structure for table `usb_staff`
 --
 
-DROP TABLE IF EXISTS `usb_ruang`;
+DROP TABLE IF EXISTS `usb_staff`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_ruang` (
-  `kd_ruang` varchar(6) NOT NULL,
-  `nm_ruang` varchar(20) NOT NULL,
-  `kapasitas` int(11) NOT NULL,
-  `jenis_ruang` varchar(20) NOT NULL,
-  `kd_lokasi` varchar(6) NOT NULL,
-  PRIMARY KEY (`kd_ruang`,`kd_lokasi`),
-  KEY `fk_usb_ruang_usb_lokasi_idx` (`kd_lokasi`),
-  CONSTRAINT `fk_usb_ruang_usb_lokasi` FOREIGN KEY (`kd_lokasi`) REFERENCES `usb_lokasi` (`kd_lokasi`) ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE `usb_staff` (
+  `no_staff` varchar(6) NOT NULL,
+  `nm_staff` varchar(25) NOT NULL,
+  `password` varchar(8) NOT NULL,
+  `fungsi` varchar(15) NOT NULL,
+  PRIMARY KEY (`no_staff`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usb_ruang`
+-- Dumping data for table `usb_staff`
 --
 
-LOCK TABLES `usb_ruang` WRITE;
-/*!40000 ALTER TABLE `usb_ruang` DISABLE KEYS */;
-INSERT INTO `usb_ruang` VALUES ('R1','Ruangan 1',40,'Ruang Teori','G1');
-/*!40000 ALTER TABLE `usb_ruang` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usb_lokasi`
---
-
-DROP TABLE IF EXISTS `usb_lokasi`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_lokasi` (
-  `kd_lokasi` varchar(6) NOT NULL,
-  `nm_lokasi` varchar(20) NOT NULL,
-  PRIMARY KEY (`kd_lokasi`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usb_lokasi`
---
-
-LOCK TABLES `usb_lokasi` WRITE;
-/*!40000 ALTER TABLE `usb_lokasi` DISABLE KEYS */;
-INSERT INTO `usb_lokasi` VALUES ('G1','Gedung 1'),('G2','Gedung 2'),('G3','Gedung 3'),('G4','Gedung 4'),('G5','Gedung 5');
-/*!40000 ALTER TABLE `usb_lokasi` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usb_jurusan`
---
-
-DROP TABLE IF EXISTS `usb_jurusan`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usb_jurusan` (
-  `kd_jurusan` varchar(6) NOT NULL,
-  `nm_jurusan` varchar(30) NOT NULL,
-  `jenjang` int(11) NOT NULL,
-  `kd_prodi` varchar(6) NOT NULL,
-  PRIMARY KEY (`kd_jurusan`),
-  KEY `fk_usb_jurusan_usb_prodi1_idx` (`kd_prodi`),
-  CONSTRAINT `fk_usb_jurusan_usb_prodi1` FOREIGN KEY (`kd_prodi`) REFERENCES `usb_prodi` (`kd_prodi`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usb_jurusan`
---
-
-LOCK TABLES `usb_jurusan` WRITE;
-/*!40000 ALTER TABLE `usb_jurusan` DISABLE KEYS */;
-INSERT INTO `usb_jurusan` VALUES ('IF','Informatika',4,'TI');
-/*!40000 ALTER TABLE `usb_jurusan` ENABLE KEYS */;
+LOCK TABLES `usb_staff` WRITE;
+/*!40000 ALTER TABLE `usb_staff` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usb_staff` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -542,4 +541,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-06-29 14:18:56
+-- Dump completed on 2014-06-30 15:08:48

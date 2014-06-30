@@ -9,7 +9,7 @@ class Mruangan extends CI_Model {
 
 	function getAllRuangan()
 	{
-		$query=$this->db->get('usb_ruang');
+		$query=$this->db->get('usb_ruangan');
 		if($query->num_rows()>0){
 			foreach ($query->result() as $row) {
 				$xxx[]=$row;
@@ -20,19 +20,19 @@ class Mruangan extends CI_Model {
 
 	function tambahRuangan($dta)
 	{
-		$this->db->insert('usb_ruang', $dta);
+		$this->db->insert('usb_ruangan', $dta);
 	}
 
 	function ubahRuangan($nip,$tmp)
 	{
 		$this->db->where('kd_ruang',$nip);
-		$this->db->update('usb_ruang', $tmp);
+		$this->db->update('usb_ruangan', $tmp);
 	}
 
 	function hapusRuangan($nip)
 	{
 		$this->db->where('kd_ruang',$nip);
-		$this->db->delete('usb_ruang');
+		$this->db->delete('usb_ruangan');
 	}
 }
 
