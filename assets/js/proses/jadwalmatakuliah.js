@@ -28,7 +28,24 @@ $(document).ready(function() {
         });
 
         document.getElementById("tnip").value=tnip;
-    } );
+    });
+
+
+    $("#tkelas").click(function(){
+        var kelas=$("#tkelas").val();
+        
+        $.ajax({
+            url:"CariJurusan",
+            type:"POST",
+            data:{
+                kelas:kelas
+            },
+            cache:false,
+            success:function(html){
+                $("#tjurusan").val(html);
+            }
+        })
+    });
    
 
     $("#bSimpanDosen").click(function(){

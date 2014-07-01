@@ -246,6 +246,16 @@ class Pengaturan extends CI_Controller {
 		$this->mjurusan->hapusJurusan($kd);
 	}
 
+	public function CariJurusan()
+	{
+		$kode=$this->input->post('kelas');
+		$kelas=$this->mjurusan->cariJurusan($kode);
+        if($kelas->num_rows()>0){
+            $kelas=$kelas->row_array();
+            echo $kelas['nm_jurusan'];
+        }       
+	}
+
 
 
 
@@ -395,7 +405,9 @@ class Pengaturan extends CI_Controller {
 
 	public function vjadwal()
 	{				
+		$data['kelas']=$this->mkelas->getAllKelas();
 		$data['semester']=$this->msemester->getAllSemester();
+		$data['noauto']=$this->mjadwalmatakuliah->nootomatis();
 		$data['title']="[Tambah] Jadwal Matakuliah";
 		$data['maincontent']="belakang/form/vjadwal";
 		$this->load->view('belakang/template', $data);

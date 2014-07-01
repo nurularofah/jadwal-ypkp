@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `jadwal-usb` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `jadwal-usb`;
--- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.5.37, for debian-linux-gnu (i686)
 --
 -- Host: localhost    Database: jadwal-usb
 -- ------------------------------------------------------
--- Server version	5.5.27
+-- Server version	5.5.31
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -37,6 +37,24 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
+-- Temporary table structure for view `vkelas`
+--
+
+DROP TABLE IF EXISTS `vkelas`;
+/*!50001 DROP VIEW IF EXISTS `vkelas`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `vkelas` (
+  `kd_kelas` tinyint NOT NULL,
+  `nm_kelas` tinyint NOT NULL,
+  `kd_jurusan` tinyint NOT NULL,
+  `nm_jurusan` tinyint NOT NULL,
+  `kd_prodi` tinyint NOT NULL,
+  `nm_prodi` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Final view structure for view `vjadwalmatakuliah`
 --
 
@@ -54,6 +72,25 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vkelas`
+--
+
+/*!50001 DROP TABLE IF EXISTS `vkelas`*/;
+/*!50001 DROP VIEW IF EXISTS `vkelas`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`roni`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vkelas` AS select `k`.`kd_kelas` AS `kd_kelas`,`k`.`nm_kelas` AS `nm_kelas`,`k`.`kd_jurusan` AS `kd_jurusan`,`j`.`nm_jurusan` AS `nm_jurusan`,`j`.`kd_prodi` AS `kd_prodi`,`p`.`nm_prodi` AS `nm_prodi` from ((`usb_kelas` `k` join `usb_jurusan` `j` on((`k`.`kd_jurusan` = `j`.`kd_jurusan`))) join `usb_prodi` `p` on((`j`.`kd_prodi` = `p`.`kd_prodi`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -64,4 +101,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-06-30 15:36:17
+-- Dump completed on 2014-07-01 17:31:12
