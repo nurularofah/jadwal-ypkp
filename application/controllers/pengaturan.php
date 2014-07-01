@@ -344,7 +344,8 @@ class Pengaturan extends CI_Controller {
 	}
 
 	public function vjadwal()
-	{		
+	{				
+		$data['semester']=$this->msemester->getAllSemester();
 		$data['title']="[Tambah] Jadwal Matakuliah";
 		$data['maincontent']="belakang/form/vjadwal";
 		$this->load->view('belakang/template', $data);

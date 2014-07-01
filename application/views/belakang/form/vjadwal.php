@@ -8,23 +8,41 @@
 				<form class="form-horizontal" action="<?php echo "";?>" method="post">
 		            <div class="col-md-6">
 		                <div class="form-group">
-		                	<label class="col-md-1">Kode:</label>
+		                	<label class="col-lg-2 control-label">Kode</label>
 					        <div class="col-md-3 col-md-offset-1">
-					            <input type="text" id="tnip1" class="form-control" readonly="readonly">
+					            <input type="text" id="tkode" class="form-control" readonly="readonly">
 					        </div>
 		                </div>
 		                <div class="form-group">
-		                	<label class="col-md-1">Tahun:</label>
-					        <div class="col-md-3 col-md-offset-1">
+		                	<label class="col-lg-2 control-label">Tahun</label>
+					        <div class="col-md-4 col-md-offset-1">
 					            <input type="text" id="ttahun" class="form-control">
 					        </div>
 		                </div>
 		                <div class="form-group">
-		                	<label class="col-md-1">Kode:</label>
-					        <div class="col-md-3 col-md-offset-1">
-					            <input type="text" id="tnip1" class="form-control" readonly="readonly">
+		                	<label class="col-lg-2 control-label">Semester</label>
+					        <div class="col-md-4 col-md-offset-1">
+					            <select name="tsemester" class="form-control" id="tsemester">
+									<?php foreach ($semester as $smt): ?>
+									<option value="<?php echo $smt->kd_smstr; ?>"><?php echo $smt->keterangan; ?></option>
+									<?php endforeach;?>
+								</select>
 					        </div>
-		                </div>		                
+		                </div>           
+		            </div>
+		            <div class="col-md-6">		            	
+		            	<div class="form-group">
+		                	<label class="col-lg-2 control-label">Kelas</label>
+					        <div class="col-md-4 col-md-offset-1">
+					            <input type="text" id="tkelas" class="form-control">
+					        </div>
+		                </div>
+		                <div class="form-group">
+		                	<label class="col-lg-2 control-label">Jurusan</label>
+					        <div class="col-md-6 col-md-offset-1">
+					            <input type="text" id="tjurusan" class="form-control" readonly="readonly">
+					        </div>
+		                </div>		               
 		            </div>
 		        </form>
 		    </div>					

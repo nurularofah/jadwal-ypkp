@@ -14,7 +14,9 @@ $(document).ready(function() {
 
     $(function(){
         $("#ttahun").datepicker({
-            format:'yyyy'
+            viewMode: 'years',
+            "format": "yyyy-mm-dd",
+            'startView': 2
         });    
     })
 
