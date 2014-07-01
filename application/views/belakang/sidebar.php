@@ -25,6 +25,9 @@
                                     <a href="<?php echo base_url().'pengaturan/jurusan'; ?>">Jurusan</a>
                                 </li>
                                 <li>
+                                    <a href="<?php echo base_url().'pengaturan/kelas'; ?>">Kelas</a>
+                                </li>
+                                <li>
                                     <a href="<?php echo base_url().'pengaturan/dosen'; ?>">Dosen</a>
                                 </li>
                                 <li>

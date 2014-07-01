@@ -247,6 +247,53 @@ class Pengaturan extends CI_Controller {
 	}
 
 
+
+
+
+	// CRUD KELAS
+	public function kelas()
+	{
+		$data['records']=$this->mkelas->getAllKelas();		
+		$data['jurusan']=$this->mjurusan->getAllJurusan();
+		$data['title']="Kelas";
+		$data['maincontent']="belakang/form/kelas";
+		$this->load->view('belakang/template', $data);
+	}
+
+	public function TambahKelas()
+	{
+		$kode=$this->input->post('kode');
+		$kelas=$this->input->post('kelas');		
+		$jurusan=$this->input->post('jurusan');
+		
+		$dt=array(
+			'kd_kelas' => $kode,
+			'nm_kelas' => $kelas,
+			'kd_jurusan' => $jurusan
+		);
+		$this->mkelas->tambahKelas($dt);		
+	}
+
+	public function UbahKelas()
+	{
+		$tmp=array(			
+			'nm_kelas' => $this->input->post('kelas'),
+			'kd_jurusan' => $this->input->post('jurusan')
+		);
+		$kode=$this->input->post('kode');
+		$this->mkelas->ubahKelas($kode,$tmp);
+	}
+
+	public function HapusKelas()
+	{
+		$kd=$this->input->post('kode');
+		$this->mkelas->hapusKelas($kd);
+	}
+
+
+
+
+
 	// CRUD SEMESTER
 	public function semester()
 	{
@@ -332,6 +379,9 @@ class Pengaturan extends CI_Controller {
 		$kd=$this->input->post('kode');
 		$this->mruangan->HapusRuangan($kd);
 	}
+
+
+
 
 
 	// CRUD JADWAL MATAKULIAH

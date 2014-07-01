@@ -91,36 +91,36 @@
 					      </div>
 					      <div class="modal-body">
 					      	<form action="" method="get" accept-charset="utf-8">					      		
-					      <div class="form-horizontal"> 
-					      <div class="form-group">
-				      				<label class="col-lg-3">Kode:</label>
-							        <div class="col-lg-8">
-							            <input type="text" id="tkode" class="form-control">
-							        </div>					  
-								</div>
-								<div class="form-group">
-									<label class="col-lg-3">Jurusan:</label>
-							        <div class="col-lg-8">
-							            <input type="text" id="tjurusan" class="form-control">
-							        </div>				  
-								</div>
-								<div class="form-group">
-									<label class="col-lg-3">Jenjang:</label>
-							        <div class="col-lg-8">
-							            <input type="text" id="tjenjang" class="form-control">
-							        </div>				  
-								</div>
-								<div class="form-group">
-									<label class="col-lg-3">Prodi:</label>
-							        <div class="col-lg-8">
-							            <select name="tprodi" class="form-control" id="tprodi">
-							            	<?php foreach ($prodi as $prod): ?>
-				                            <option value="<?php echo $prod->kd_prodi; ?>"><?php echo $prod->nm_prodi; ?></option>
-				                            <?php endforeach;?>
-				                        </select>
-							        </div>				  
-								</div>		      		     	
-					      </div>
+					      		<div class="form-horizontal"> 
+						      		<div class="form-group">
+					      				<label class="col-lg-3">Kode:</label>
+								        <div class="col-lg-8">
+								            <input type="text" id="tkode" class="form-control">
+								        </div>					  
+									</div>
+									<div class="form-group">
+										<label class="col-lg-3">Jurusan:</label>
+								        <div class="col-lg-8">
+								            <input type="text" id="tjurusan" class="form-control">
+								        </div>				  
+									</div>
+									<div class="form-group">
+										<label class="col-lg-3">Jenjang:</label>
+								        <div class="col-lg-8">
+								            <input type="text" id="tjenjang" class="form-control">
+								        </div>				  
+									</div>
+									<div class="form-group">
+										<label class="col-lg-3">Prodi:</label>
+								        <div class="col-lg-8">
+								            <select name="tprodi" class="form-control" id="tprodi">
+								            	<?php foreach ($prodi as $prod): ?>
+					                            <option value="<?php echo $prod->kd_prodi; ?>"><?php echo $prod->nm_prodi; ?></option>
+					                            <?php endforeach;?>
+					                        </select>
+								        </div>				  
+									</div>		      		     	
+							    </div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="glyphicon glyphicon-collapse-up"></i> Keluar</button>
 					        <button id="bHapusJurusan" type="button" class="btn btn-warning"><i class="glyphicon glyphicon-remove"></i> Hapus</button>

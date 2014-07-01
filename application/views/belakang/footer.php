@@ -28,6 +28,7 @@
     <script src="<?php echo base_url('assets/js/proses/lokasi.js');?>"></script>
     <script src="<?php echo base_url('assets/js/proses/prodi.js');?>"></script>
     <script src="<?php echo base_url('assets/js/proses/jurusan.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/proses/kelas.js');?>"></script>
     <script src="<?php echo base_url('assets/js/proses/semester.js');?>"></script>
     <script src="<?php echo base_url('assets/js/proses/ruangan.js');?>"></script>
 
