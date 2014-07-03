@@ -19,6 +19,21 @@ class Mjadwalmatakuliah extends CI_Model {
 			return $xxx="Data Tidak ditemukan";
 		}
 	}
+
+	function nootomatis(){
+        $today=date('Ymd');
+        $query=mysql_query("select max(kd_head_jadwal) as last from usb_jadwalmatkul where kd_head_jadwal like '$today%'");
+        $data=mysql_fetch_array($query);
+        $lastNoFaktur=$data['last'];
+        
+        $lastNoUrut=substr($lastNoFaktur,8,3);
+        
+        $nextNoUrut=$lastNoUrut+1;
+        
+        $nextNoTransaksi=$today.sprintf('%02s',$nextNoUrut);
+        
+        return $nextNoTransaksi;
+    }
 }
 
 /* End of file mjadwalmatakuliah.php */

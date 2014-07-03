@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `jadwal-usb` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `jadwal-usb`;
--- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.5.37, for debian-linux-gnu (i686)
 --
 -- Host: localhost    Database: jadwal-usb
 -- ------------------------------------------------------
--- Server version	5.5.27
+-- Server version	5.5.31
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -98,7 +98,11 @@ CREATE TABLE `usb_kelas` (
 
 LOCK TABLES `usb_kelas` WRITE;
 /*!40000 ALTER TABLE `usb_kelas` DISABLE KEYS */;
+<<<<<<< HEAD
 INSERT INTO `usb_kelas` VALUES ('1R','Tingkat 1 ','MI'),('2R','Tingkat 2 ','MI'),('3R','Tingkat 3 ','MI'),('4R','Tingkat 4 ','MI');
+=======
+INSERT INTO `usb_kelas` VALUES ('1R','Tingkat 1 ','MI'),('2R','Tingkat 2 ','TI'),('3R','Tingkat 3 ','MI'),('4R','Tingkat 4 ','MI');
+>>>>>>> c24561a8c3eb9ff284a0a8dafd7e3988f1e3a00c
 /*!40000 ALTER TABLE `usb_kelas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -310,7 +314,7 @@ DROP TABLE IF EXISTS `usb_jadwalmatkul`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usb_jadwalmatkul` (
-  `kd_head_jadwal` varchar(6) NOT NULL,
+  `kd_head_jadwal` varchar(8) NOT NULL,
   `tahun` year(4) NOT NULL,
   `kd_kelas` varchar(6) NOT NULL,
   `kd_smstr` int(11) NOT NULL,
@@ -339,7 +343,7 @@ DROP TABLE IF EXISTS `usb_detail_jadwalmatkul`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usb_detail_jadwalmatkul` (
-  `kd_head_jadwal` varchar(6) NOT NULL,
+  `kd_head_jadwal` varchar(8) NOT NULL,
   `hari` varchar(10) NOT NULL,
   `jammulai` time NOT NULL,
   `jamakhir` time NOT NULL,
@@ -536,4 +540,8 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+<<<<<<< HEAD
 -- Dump completed on 2014-07-01 10:51:31
+=======
+-- Dump completed on 2014-07-01 17:30:47
+>>>>>>> c24561a8c3eb9ff284a0a8dafd7e3988f1e3a00c

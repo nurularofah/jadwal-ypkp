@@ -18,6 +18,12 @@ class Mjurusan extends CI_Model {
 		}
 	}
 
+	function cariJurusan($kode)
+	{
+		$this->db->where("kd_kelas",$kode);
+        return $this->db->get("vkelas");
+	}
+
 	function tambahJurusan($dta)
 	{
 		$this->db->insert('usb_jurusan', $dta);
@@ -34,6 +40,7 @@ class Mjurusan extends CI_Model {
 		$this->db->where('kd_jurusan',$nip);
 		$this->db->delete('usb_jurusan');
 	}
+
 }
 
 /* End of file mjurusan.php */
