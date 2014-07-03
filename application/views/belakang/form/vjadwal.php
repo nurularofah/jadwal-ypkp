@@ -34,7 +34,11 @@
 		            	<div class="form-group">
 		                	<label class="col-lg-2 control-label">Kelas</label>
 					        <div class="col-md-4 col-md-offset-1">
-					            <input type="text" id="tkelas" class="form-control">
+					            <select name="tkelas" class="form-control" id="tkelas">
+									<?php foreach ($kelas as $kls): ?>
+									<option value="<?php echo $kls->kd_smstr; ?>"><?php echo $kls->keterangan; ?></option>
+									<?php endforeach;?>
+								</select>
 					        </div>
 		                </div>
 		                <div class="form-group">

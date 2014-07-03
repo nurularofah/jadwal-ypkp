@@ -86,10 +86,9 @@ CREATE TABLE `usb_kelas` (
   `kd_kelas` varchar(6) NOT NULL,
   `nm_kelas` varchar(10) NOT NULL,
   `kd_jurusan` varchar(6) NOT NULL,
-  `kd_prodi` varchar(6) NOT NULL,
   PRIMARY KEY (`kd_kelas`),
-  KEY `fk_usb_kelas_usb_jurusan1_idx` (`kd_jurusan`,`kd_prodi`),
-  CONSTRAINT `fk_usb_kelas_usb_jurusan1` FOREIGN KEY (`kd_jurusan`) REFERENCES `usb_jurusan` (`kd_jurusan`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk_usb_kelas_usb_jurusan1_idx` (`kd_jurusan`),
+  CONSTRAINT `fk_usb_kelas_usb_jurusan1` FOREIGN KEY (`kd_jurusan`) REFERENCES `usb_jurusan` (`kd_jurusan`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -99,7 +98,7 @@ CREATE TABLE `usb_kelas` (
 
 LOCK TABLES `usb_kelas` WRITE;
 /*!40000 ALTER TABLE `usb_kelas` DISABLE KEYS */;
-INSERT INTO `usb_kelas` VALUES ('1R','Regular 1','IF','TI');
+INSERT INTO `usb_kelas` VALUES ('1R','Tingkat 1 ','MI'),('2R','Tingkat 2 ','MI'),('3R','Tingkat 3 ','MI'),('4R','Tingkat 4 ','MI');
 /*!40000 ALTER TABLE `usb_kelas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -313,16 +312,12 @@ DROP TABLE IF EXISTS `usb_jadwalmatkul`;
 CREATE TABLE `usb_jadwalmatkul` (
   `kd_head_jadwal` varchar(6) NOT NULL,
   `tahun` year(4) NOT NULL,
-  `kd_jurusan` varchar(6) NOT NULL,
-  `kd_prodi` varchar(6) NOT NULL,
   `kd_kelas` varchar(6) NOT NULL,
   `kd_smstr` int(11) NOT NULL,
   PRIMARY KEY (`kd_head_jadwal`),
-  KEY `fk_usb_jadwalmatkul_usb_jurusan1_idx` (`kd_jurusan`,`kd_prodi`),
   KEY `fk_usb_jadwalmatkul_usb_kelas1_idx` (`kd_kelas`),
   KEY `fk_usb_jadwalmatkul_usb_semester1_idx` (`kd_smstr`),
-  CONSTRAINT `fk_usb_jadwalmatkul_usb_jurusan1` FOREIGN KEY (`kd_jurusan`) REFERENCES `usb_jurusan` (`kd_jurusan`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usb_jadwalmatkul_usb_kelas1` FOREIGN KEY (`kd_kelas`) REFERENCES `usb_kelas` (`kd_kelas`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usb_jadwalmatkul_usb_kelas1` FOREIGN KEY (`kd_kelas`) REFERENCES `usb_kelas` (`kd_kelas`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_usb_jadwalmatkul_usb_semester1` FOREIGN KEY (`kd_smstr`) REFERENCES `usb_semester` (`kd_smstr`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -333,7 +328,6 @@ CREATE TABLE `usb_jadwalmatkul` (
 
 LOCK TABLES `usb_jadwalmatkul` WRITE;
 /*!40000 ALTER TABLE `usb_jadwalmatkul` DISABLE KEYS */;
-INSERT INTO `usb_jadwalmatkul` VALUES ('1',2014,'IF','TI','1R',1);
 /*!40000 ALTER TABLE `usb_jadwalmatkul` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -428,7 +422,7 @@ CREATE TABLE `usb_dosen` (
 
 LOCK TABLES `usb_dosen` WRITE;
 /*!40000 ALTER TABLE `usb_dosen` DISABLE KEYS */;
-INSERT INTO `usb_dosen` VALUES ('100001','roni','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100002','irawan','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100003','nurul','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100004','Nurul Arofah','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang');
+INSERT INTO `usb_dosen` VALUES ('100001','roni','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100002','irawan','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100003','nurul','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100004','Nurul Arofah','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100005','Lukman Abdul Fatah, MSI','Ketua Jurusan','S2','Bandung','1980-06-01',22586543,2147483647,'Kiara Condong');
 /*!40000 ALTER TABLE `usb_dosen` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -501,7 +495,7 @@ CREATE TABLE `usb_lokasi` (
 
 LOCK TABLES `usb_lokasi` WRITE;
 /*!40000 ALTER TABLE `usb_lokasi` DISABLE KEYS */;
-INSERT INTO `usb_lokasi` VALUES ('G1','Gedung 1');
+INSERT INTO `usb_lokasi` VALUES ('G1','Gedung 1'),('G2','Gedung 2');
 /*!40000 ALTER TABLE `usb_lokasi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -529,7 +523,7 @@ CREATE TABLE `usb_jurusan` (
 
 LOCK TABLES `usb_jurusan` WRITE;
 /*!40000 ALTER TABLE `usb_jurusan` DISABLE KEYS */;
-INSERT INTO `usb_jurusan` VALUES ('MI','Manajemen Informatika','3 Tahun','MI'),('TI','Teknik Informatika','3 Tahun','TI');
+INSERT INTO `usb_jurusan` VALUES ('KP','Komputer Perpajakan','3 Tahun','KA'),('MI','Manajemen Informatika','3 Tahun','MI'),('TI','Teknik Informatika','3 Tahun','TI');
 /*!40000 ALTER TABLE `usb_jurusan` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -542,4 +536,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-06-30 15:36:05
+-- Dump completed on 2014-07-01 10:51:31
