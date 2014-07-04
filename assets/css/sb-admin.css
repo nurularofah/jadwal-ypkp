@@ -45,6 +45,7 @@ body {
 
 .navbar-top-links li {
     display: inline-block;
+    text-align: center;
 }
 
 .navbar-top-links li:last-child {

@@ -1,4 +1,10 @@
 $(document).ready(function() {
+
+    function loadData(args) {
+        $("#tampil").load("<?php echo base_url('pengaturan/jadwalmatakuliah');?>");
+    }
+    loadData();
+
     $('#tblJadwalMatkul').dataTable();
     var table = $('#tblJadwalMatkul').DataTable();
 
@@ -48,34 +54,24 @@ $(document).ready(function() {
     });
    
 
-    $("#bSimpanDosen").click(function(){
-        var nip=$("#tnip1").val();
-        var nama=$("#tnama1").val();
-        var jabatan=$("#tjabatan1").val();
-        var pendidikan=$("#tpendidikan1").val();
-        var tempatlahir=$("#ttempatlahir1").val();
-        var tanggallahir=$("#ttanggallahir1").val();
-        var telepon=$("#ttelepon1").val();
-        var handphone=$("#thandphone1").val();
-        var alamat=$("#talamat1").val();
-
+    $("#bSimpanVJadwal").click(function(){
+        var kode=$("#tkode").val();
+        var tahun=$("#ttahun").val();
+        var kdkelas=$("#tkelas").val();
+        var kdsemester=$("#tsemester").val();
+        
         $.ajax({
-            url: "TambahDosen",
+            url: "simpanJadwalMatakuliah",
             type: "POST",
             data:{
-                nip:nip,
-                nama:nama,
-                jabatan:jabatan,
-                pendidikan:pendidikan,
-                tempatlahir:tempatlahir,
-                tanggallahir:tanggallahir,
-                telepon:telepon,
-                handphone:handphone,
-                alamat:alamat
+                kode:kode,
+                tahun:tahun,
+                kdkelas:kdkelas,
+                kdsemester:kdsemester
             },
             cache: false,
             success: function(){
-                
+                location.reload();
             }
         });
     });

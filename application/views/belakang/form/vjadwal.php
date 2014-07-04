@@ -56,7 +56,29 @@
 			<div class="panel-heading">
 		    	<h3 class="panel-title">Detail Jadwal Matakuliah</h3>
 			</div>
-		    <div class="panel-body">		    	
+		    <div class="panel-body">
+		    	<div class="form-inline">
+		            <div class="form-group">
+		                <label>Kode Buku</label>
+		                <input type="text" class="form-control" placeholder="Kode Buku" id="kode">
+		            </div>
+		            <div class="form-group">
+		                <label class="sr-only">Judul Buku</label>
+		                <input type="text" class="form-control" placeholder="Judul Buku" id="judul" readonly="readonly">
+		            </div>
+		            <div class="form-group">
+		                <label class="sr-only">Pengarang</label>
+		                <input type="text" class="form-control" placeholder="Pengarang" id="pengarang" readonly="readonly">
+		            </div>
+		            <div class="form-group">
+		                <label class="sr-only">Pengarang</label>
+		                <button id="tambah" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i></button>
+		            </div>
+		            <div class="form-group">
+		                <label class="sr-only">Pengarang</label>
+		                <button id="cari" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+		            </div>
+		        </div>		    	
 				<!-- Tabel -->
 		    	<div class="table-responsive">
 				    <table class="table table-hover display" id="tblvjadwal" cellspacing="0" width="100%">
@@ -86,8 +108,8 @@
 				</div>
 		    </div>
 		    <div class="modal-footer">
-		    	<a href="<?php echo base_url('pengaturan/jadwalmatakuliah');?>" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Keluar</a>				
-				<button id="bSimpanJadwal" type="button" class="btn btn-primary"><i class="glyphicon glyphicon-hdd"></i> Simpan</button>
+		    	<a href="<?php echo base_url('pengaturan/jadwalmatakuliah');?>" class="btn btn-danger"><i class="glyphicon glyphicon-collapse-up"></i> Keluar</a>
+				<button id="bSimpanVJadwal" type="button" class="btn btn-primary"><i class="glyphicon glyphicon-hdd"></i> Simpan</button>
 			</div>					
 		</div>
 	</div>

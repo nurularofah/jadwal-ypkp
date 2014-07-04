@@ -98,11 +98,7 @@ CREATE TABLE `usb_kelas` (
 
 LOCK TABLES `usb_kelas` WRITE;
 /*!40000 ALTER TABLE `usb_kelas` DISABLE KEYS */;
-<<<<<<< HEAD
 INSERT INTO `usb_kelas` VALUES ('1R','Tingkat 1 ','MI'),('2R','Tingkat 2 ','MI'),('3R','Tingkat 3 ','MI'),('4R','Tingkat 4 ','MI');
-=======
-INSERT INTO `usb_kelas` VALUES ('1R','Tingkat 1 ','MI'),('2R','Tingkat 2 ','TI'),('3R','Tingkat 3 ','MI'),('4R','Tingkat 4 ','MI');
->>>>>>> c24561a8c3eb9ff284a0a8dafd7e3988f1e3a00c
 /*!40000 ALTER TABLE `usb_kelas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -540,8 +536,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
 -- Dump completed on 2014-07-01 10:51:31
-=======
--- Dump completed on 2014-07-01 17:30:47
->>>>>>> c24561a8c3eb9ff284a0a8dafd7e3988f1e3a00c

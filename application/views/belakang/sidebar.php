@@ -1,57 +1,78 @@
-<div class="navbar-default navbar-static-side" role="navigation">
+            <div class="navbar-default navbar-static-side" role="navigation">
                 <div class="sidebar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Cari ...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#tutup1"><i class="fa fa-edit fa-fw"></i> Data Master</a>
+                                </h4>
                             </div>
-                            <!-- /input-group -->
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url().'pengaturan';?>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-edit fa-fw"></i> Data Master<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="<?php echo base_url().'pengaturan/prodi'; ?>">Prodi</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url().'pengaturan/jurusan'; ?>">Jurusan</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url().'pengaturan/kelas'; ?>">Kelas</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url().'pengaturan/dosen'; ?>">Dosen</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url().'pengaturan/matakuliah'; ?>">Matakuliah</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url().'pengaturan/semester'; ?>">Semester</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url().'pengaturan/lokasi'; ?>">Lokasi</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url().'pengaturan/ruangan'; ?>">Ruangan</a>
-                                </li>                                
-                            </ul>
-                            <!-- /.nav-second-level -->
-                            <a href="#"><i class="fa fa-table fa-fw"></i> Jadwal<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="<?php echo base_url().'pengaturan/jadwalmatakuliah'; ?>">Jadwal Matakuliah</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>                        
+                            <div id="tutup1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <tr>
+                                            <td>
+                                                <span class="glyphicon glyphicon-star"></span> <a href="<?php echo base_url().'pengaturan/prodi'; ?>">Prodi</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                               <span class="glyphicon glyphicon-pencil"></span> <a href="<?php echo base_url().'pengaturan/jurusan'; ?>">Jurusan</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="glyphicon glyphicon-saved"></span> <a href="<?php echo base_url().'pengaturan/kelas'; ?>">Kelas</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                               <span class="glyphicon glyphicon-save"></span> <a href="<?php echo base_url().'pengaturan/dosen'; ?>">Dosen</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="glyphicon glyphicon-saved"></span> <a href="<?php echo base_url().'pengaturan/matakuliah'; ?>">Matakuliah</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="glyphicon glyphicon-saved"></span> <a href="<?php echo base_url().'pengaturan/semester'; ?>">Semester</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                               <span class="glyphicon glyphicon-save"></span> <a href="<?php echo base_url().'pengaturan/lokasi'; ?>">Lokasi</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                               <span class="glyphicon glyphicon-save"></span> <a href="<?php echo base_url().'pengaturan/ruangan'; ?>">Ruangan</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#tutup2"><span class="glyphicon glyphicon-th">
+                            </span> Jadwal</a>
+                                </h4>
+                            </div>
+                            <div id="tutup2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <tr>
+                                            <td>
+                                                <span class="glyphicon glyphicon-list-alt"></span> <a href="<?php echo base_url().'pengaturan/jadwalmatakuliah'; ?>">Jadwal Matakuliah</a>
+                                            </td>
+                                        </tr>                                        
+                                    </table>
+                                </div>
+                            </div>
+                        </div>                        
                     </ul>
                     <!-- /#side-menu -->
                 </div>

@@ -412,6 +412,22 @@ class Pengaturan extends CI_Controller {
 		$data['maincontent']="belakang/form/vjadwal";
 		$this->load->view('belakang/template', $data);
 	}
+
+	public function simpanJadwalMatakuliah()
+	{
+		$kode=$this->input->post('kode');
+		$tahun=$this->input->post('tahun');		
+		$kelas=$this->input->post('kdkelas');		
+		$semester=$this->input->post('kdsemester');		
+		
+		$dt=array(
+			'kd_head_jadwal' => $kode,
+			'tahun' => $tahun,
+			'kd_kelas' => $kelas,
+			'kd_smstr' => $semester
+		);
+		$this->mjadwalmatakuliah->TambahJadwalMatakuliah($dt);
+	}
 }
 
 /* End of file pengaturan.php */

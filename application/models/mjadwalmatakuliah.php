@@ -30,10 +30,16 @@ class Mjadwalmatakuliah extends CI_Model {
         
         $nextNoUrut=$lastNoUrut+1;
         
-        $nextNoTransaksi=$today.sprintf('%02s',$nextNoUrut);
+        $nextNoTransaksi=$today.sprintf('%03s',$nextNoUrut);
         
         return $nextNoTransaksi;
     }
+
+
+    function TambahJadwalMatakuliah($dta)
+	{
+		$this->db->insert('usb_jadwalmatkul', $dta);
+	}
 }
 
 /* End of file mjadwalmatakuliah.php */
