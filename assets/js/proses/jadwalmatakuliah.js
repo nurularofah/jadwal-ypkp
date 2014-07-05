@@ -23,6 +23,18 @@ $(document).ready(function() {
             viewMode: 'years',
             "format": "yyyy-mm-dd",
             'startView': 2
+        });
+
+        $("#tJamMulaiDetail").datepicker({            
+            viewMode: 'years',
+            "format": "yyyy-mm-dd",
+            'startView': 2
+        });
+
+        $("#tJamAkhirDetail").datepicker({
+            viewMode: 'years',
+            "format": "yyyy-mm-dd",
+            'startView': 2
         });    
     })
 

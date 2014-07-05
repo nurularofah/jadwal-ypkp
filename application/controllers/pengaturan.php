@@ -405,9 +405,17 @@ class Pengaturan extends CI_Controller {
 
 	public function vjadwal()
 	{				
+		//head
 		$data['kelas']=$this->mkelas->getAllKelas();
 		$data['semester']=$this->msemester->getAllSemester();
-		$data['noauto']=$this->mjadwalmatakuliah->nootomatis();
+		$data['nooto']=$this->mjadwalmatakuliah->nootomatis();
+		
+		//detail
+		$data['matakuliah']=$this->mmatakuliah->getAllMatkul();
+		$data['ruangan']=$this->mruangan->getAllRuangan();
+		$data['dosen']=$this->mdosen->getAllDosen();
+
+		//content
 		$data['title']="[Tambah] Jadwal Matakuliah";
 		$data['maincontent']="belakang/form/vjadwal";
 		$this->load->view('belakang/template', $data);
