@@ -91,6 +91,51 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Dumping routines for database 'jadwal-usb'
+--
+/*!50003 DROP FUNCTION IF EXISTS `nooto` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = '' */ ;
+DELIMITER ;;
+CREATE DEFINER=`roni`@`localhost` FUNCTION `nooto`() RETURNS int(11)
+BEGIN
+DECLARE nomor char(4);
+DECLARE thn char(2);
+DECLARE bln char(2);
+DECLARE tamp char(16);
+
+    SET nomor=(SELECT COUNT(kd_head_jadwal)FROM usb_jadwalmatkul);
+    
+    IF nomor>0 THEN
+        BEGIN
+            SET nomor=(SELECT RIGHT(kd_head_jadwal,4) FROM usb_jadwalmatkul ORDER BY kd_head_jadwal DESC LIMIT 0,1);
+            SET nomor=nomor+1;
+        END;
+    ELSE
+        SET nomor=1;
+    END IF;
+    
+    SET thn=RIGHT(YEAR(NOW()),2);
+    SET bln=MONTH(NOW());
+    IF LENGTH(bln)=1 THEN
+        SET bln=CONCAT('0',bln);
+    END IF;
+    SET tamp=CONCAT(thn,bln,LEFT('0000',4-LENGTH(nomor)),nomor);
+    RETURN tamp;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -101,4 +146,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-05 14:27:43
+-- Dump completed on 2014-07-09 17:46:24
