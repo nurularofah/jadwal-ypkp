@@ -46,7 +46,7 @@
 					        <div class="col-md-6 col-md-offset-1">
 					            <input type="text" id="tjurusan" class="form-control" readonly="readonly">
 					        </div>
-		                </div>		               
+		                </div>             
 		            </div>
 		        </form>
 		    </div>					
@@ -107,12 +107,26 @@
 										</div>
 
 										<div class="form-group">
-											<label class="col-lg-3">Jam</label>
-											<div class="col-lg-4">
-												<input type="text" id="tJamMulaiDetail" placeholder="Jam Mulai" class="form-control">
-											</div>
-											<div class="col-lg-4">
-												<input type="text" id="tJamAkhirDetail" placeholder="Jam Akhir" class="form-control">
+											<label class="col-lg-3">Jam Mulai</label>
+											<div class="col-lg-8 ">
+												<div class="input-group clockpicker">
+												    <input id="jammulai" type="text"class="form-control">
+												    <span class="input-group-addon">
+												        <span class="glyphicon glyphicon-time"></span>
+												    </span>
+												</div>
+											</div>											
+										</div>
+
+										<div class="form-group">
+											<label class="col-lg-3">Jam Selesai</label>
+											<div class="col-lg-8 ">
+												<div class="input-group clockpicker">
+												    <input id="jamselesai" type="text"class="form-control">
+												    <span class="input-group-addon">
+												        <span class="glyphicon glyphicon-time"></span>
+												    </span>
+												</div>
 											</div>											
 										</div>
 

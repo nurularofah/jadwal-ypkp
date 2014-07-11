@@ -21,9 +21,11 @@
 
     <!-- Coba library -->
     <link href="<?php echo base_url('assets/css/datepicker.css');?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/bootstrap-clockpicker.min.css');?>" rel="stylesheet">
 
     <style>
       .datepicker{z-index:1151;}
+      .clockpicker-popover {z-index: 999999;}
     </style>
 
 </head>

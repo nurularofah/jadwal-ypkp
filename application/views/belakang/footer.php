@@ -19,8 +19,10 @@
 
 
     <!-- Coba library -->    
-    <script src="<?php echo base_url('assets/js/holder.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-datepicker.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/bootstrap-clockpicker.min.js');?>"></script>
+
+    <script src="<?php echo base_url('assets/js/holder.js');?>"></script>    
     <script src="<?php echo base_url('assets/js/application.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
     <script src="<?php echo base_url('assets/js/proses/dosen.js');?>"></script>

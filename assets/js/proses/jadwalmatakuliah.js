@@ -35,7 +35,12 @@ $(document).ready(function() {
             viewMode: 'years',
             "format": "yyyy-mm-dd",
             'startView': 2
-        });    
+        }); 
+
+        $('.clockpicker').clockpicker({
+            autoclose: true
+        });
+   
     })
 
     $('#tblJadwalMatkul2 tbody').on('click', 'tr', function () {
