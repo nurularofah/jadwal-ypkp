@@ -5,8 +5,18 @@ $(document).ready(function() {
     }
     loadData();
 
-    $('#tblJadwalMatkul').dataTable();
+    $('#tblJadwalMatkul').dataTable();    
     var table = $('#tblJadwalMatkul').DataTable();
+    var tblvjadwal = $('#tblvjadwal').DataTable({
+        "columnDefs": [
+        {
+            "targets": [ 7 ],
+            "visible": false
+        },{
+            "targets": [ 8 ],
+            "visible": false
+        }]
+    });
 
     $('#tblJadwalMatkul tbody').on( 'click', 'tr', function () {
         if ( $(this).hasClass('selected') ) {
@@ -140,6 +150,32 @@ $(document).ready(function() {
                 
             }
         });
+    });
+
+   
+    $("#bTambahDetailJadwalKuliah").click(function(){
+        var hari=$("#tvhari").val();
+        var matakuliah=$("#tvmatakuliah").val();
+        var matakuliah2=document.getElementById("tvmatakuliah");
+        var sks=$("#tvsks").val();
+        var mulai=$("#tvjammulai").val();
+        var selesai=$("#tvjamselesai").val();
+        var ruangan=$("#tvruangan").val();
+        var dosen=$("#tvdosen").val();
+        var dosen2=document.getElementById("tvdosen");
+       
+        tblvjadwal.row.add( [
+            hari,
+            matakuliah2.options[matakuliah2.selectedIndex].text,
+            sks,
+            mulai + ' - ' + selesai,
+            ruangan,
+            dosen2.options[dosen2.selectedIndex].text,
+            '<a href=""><i class="fa fa-trash-o"></i></a> | <a href=""><i class="fa fa-share-square"></i></a>',
+            matakuliah,
+            dosen
+        ] ).draw();
+
     });
 
 } );

@@ -77,7 +77,7 @@
 										<div class="form-group">
 											<label class="col-lg-3">Hari</label>
 											<div class="col-lg-8">
-												<select name="tkelas" placeholder="Hari" class="form-control" id="tkelas">
+												<select name="tvhari" placeholder="Hari" class="form-control" id="tvhari">
 													<option value="Senin">Senin</option>
 													<option value="Selasa">Selasa</option>									
 													<option value="Rabu">Rabu</option>
@@ -91,7 +91,7 @@
 										<div class="form-group">
 											<label class="col-lg-3">Matakuliah</label>
 											<div class="col-lg-8">
-												<select class="form-control" id="tdetailmatakuliah">									
+												<select class="form-control" id="tvmatakuliah">									
 													<?php foreach ($matakuliah as $mt): ?>
 													<option value="<?php echo $mt->kd_matkul; ?>"><?php echo $mt->nm_matkul; ?></option>
 													<?php endforeach;?>
@@ -102,7 +102,7 @@
 										<div class="form-group">
 											<label class="col-lg-3">SKS</label>
 											<div class="col-lg-8">
-												<input type="text" id="tjurusan" class="form-control">
+												<input type="number" id="tvsks" class="form-control">
 											</div>					  
 										</div>
 
@@ -110,7 +110,7 @@
 											<label class="col-lg-3">Jam Mulai</label>
 											<div class="col-lg-8 ">
 												<div class="input-group clockpicker">
-												    <input id="jammulai" type="text"class="form-control">
+												    <input id="tvjammulai" type="text"class="form-control">
 												    <span class="input-group-addon">
 												        <span class="glyphicon glyphicon-time"></span>
 												    </span>
@@ -122,7 +122,7 @@
 											<label class="col-lg-3">Jam Selesai</label>
 											<div class="col-lg-8 ">
 												<div class="input-group clockpicker">
-												    <input id="jamselesai" type="text"class="form-control">
+												    <input id="tvjamselesai" type="text"class="form-control">
 												    <span class="input-group-addon">
 												        <span class="glyphicon glyphicon-time"></span>
 												    </span>
@@ -133,7 +133,7 @@
 										<div class="form-group">
 											<label class="col-lg-3">Ruangan</label>
 											<div class="col-lg-8">
-												<select class="form-control" id="tdetailruangan">									
+												<select class="form-control" id="tvruangan">									
 													<?php foreach ($ruangan as $r): ?>
 													<option value="<?php echo $r->kd_ruang; ?>"><?php echo $r->nm_ruang; ?></option>
 													<?php endforeach;?>
@@ -144,7 +144,7 @@
 										<div class="form-group">
 											<label class="col-lg-3">Dosen</label>
 											<div class="col-lg-8">
-												<select class="form-control" id="tdetailruangan">									
+												<select class="form-control" id="tvdosen">									
 													<?php foreach ($dosen as $d): ?>
 													<option value="<?php echo $d->nip; ?>"><?php echo $d->nm_dosen; ?></option>
 													<?php endforeach;?>
@@ -173,18 +173,14 @@
 				                <th>SKS</th>
 				                <th>Jam</th>
 				                <th>Ruangan</th>
-				                <th>Dosen</th>		                
+				                <th>Dosen</th>
+				                <th>Aksi</th>
+				                <th class="hide"></th>
+				                <th class="hide"></th>
 				            </tr>
 				        </thead>
 				        <tbody>				        	
-				            <tr>				                
-				                <td>"Roni"</td>
-				                <td>"Roni"</td>
-				                <td>"Roni"</td>
-				                <td>"Roni"</td>
-				                <td>"Roni"</td>
-				                <td>"Roni"</td>
-				            </tr>				            
+				            				            
 				        </tbody>
 				    </table>
 				</div>
