@@ -192,10 +192,26 @@
 	"buffers":
 	[
 		{
-			"file": "application/views/belakang/form/vjadwal.php",
+			"file": "application/views/belakang/form/dosen.php",
 			"settings":
 			{
-				"buffer_size": 7510,
+				"buffer_size": 8407,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/models/mdosen.php",
+			"settings":
+			{
+				"buffer_size": 734,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/controllers/pengaturan.php",
+			"settings":
+			{
+				"buffer_size": 9793,
 				"line_ending": "Windows"
 			}
 		}
@@ -256,10 +272,20 @@
 	},
 	"file_history":
 	[
+		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/lokasi.js",
+		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/ruangan.js",
+		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/semester.js",
+		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/matakuliah.js",
+		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/kelas.js",
+		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/jurusan.js",
+		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/dosen.js",
+		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/prodi.js",
+		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/vjadwal.php",
+		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/jadwalmatakuliah.js",
+		"/C/Users/Roni_2/AppData/Local/Temp/Rar$DI69.848/bootstrap-formhelpers.js",
 		"/C/xampp/htdocs/perpustakaan/application/views/peminjaman/index.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/mjadwalmatakuliah.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/controllers/pengaturan.php",
-		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/jadwalmatakuliah.js",
 		"/C/xampp/htdocs/jadwal-ypkp/assets/js/bootstrap-datepicker.js",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/footer.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/mmatakuliah.php",
@@ -267,29 +293,21 @@
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/sidebar.php",
 		"/E/Project/REXAM/Database/dbrexam.sql",
 		"/C/xampp/htdocs/jadwal-ypkp/application/config/autoload.php",
-		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/vjadwal.php",
 		"/C/xampp/htdocs/perpustakaan/application/views/anggota/index.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/kelas.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/jurusan.php",
-		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/kelas.js",
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/mkelas.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/mjurusan.php",
-		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/jurusan.js",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/jadwalmatakuliah.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/msemester.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/dosen.php",
 		"/C/xampp/htdocs/jadwal-ypkp/index.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/config/database.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/mruangan.php",
-		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/ruangan.js",
 		"/C/xampp/htdocs/jadwal-ypkp/database/tabel.sql",
 		"/C/xampp/htdocs/jadwal-ypkp/database/view.sql",
-		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/prodi.js",
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/mdosen.php",
-		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/dosen.js",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/semester.php",
-		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/lokasi.js",
-		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/semester.js",
 		"/C/xampp/htdocs/jadwal-ypkp/assets/tables.html",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/prodi.php",
 		"/C/xampp/htdocs/perpustakaan/application/controllers/peminjaman.php",
@@ -303,7 +321,6 @@
 		"/C/xampp/htdocs/jadwal-ypkp/application/models/mjadwalmatakuliah",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/form/matakuliah.php",
 		"/C/xampp/htdocs/jadwal-ypkp/assets/forms.html",
-		"/C/xampp/htdocs/jadwal-ypkp/assets/js/proses/matakuliah.js",
 		"/C/xampp/htdocs/perpustakaan/application/config/database.php",
 		"/C/xampp/htdocs/tokyomobilbandung/application/config/database.php",
 		"/C/xampp/htdocs/jadwal-ypkp/application/views/belakang/header.php",
@@ -382,8 +399,7 @@
 		"/C/Users/Roni_2/AppData/Roaming/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
 		"/C/xampp/htdocs/sik-hb/application/frontend/rawatjalan/RJtransaksi.js",
 		"/C/xampp/htdocs/sik-hb/application/frontend/rekammedis/RMberkasRM.js",
-		"/C/xampp/htdocs/sik-hb/application/backend/controllers/print/print_rekammedis.php",
-		"/C/xampp/htdocs/sik-hb/application/backend/controllers/print/printnota.php"
+		"/C/xampp/htdocs/sik-hb/application/backend/controllers/print/print_rekammedis.php"
 	],
 	"find":
 	{
@@ -552,23 +568,23 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "application/views/belakang/form/vjadwal.php",
+					"file": "application/views/belakang/form/dosen.php",
 					"settings":
 					{
-						"buffer_size": 7510,
+						"buffer_size": 8407,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5235,
-								5235
+								797,
+								797
 							]
 						],
 						"settings":
@@ -577,7 +593,61 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1762.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/models/mdosen.php",
+					"settings":
+					{
+						"buffer_size": 734,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/controllers/pengaturan.php",
+					"settings":
+					{
+						"buffer_size": 9793,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								345,
+								345
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -627,6 +697,46 @@
 		"selected_items":
 		[
 			[
+				"ruangan",
+				"assets/js/proses/ruangan.js"
+			],
+			[
+				"loka",
+				"assets/js/proses/lokasi.js"
+			],
+			[
+				"seme",
+				"assets/js/proses/semester.js"
+			],
+			[
+				"mata",
+				"assets/js/proses/matakuliah.js"
+			],
+			[
+				"kelas",
+				"assets/js/proses/kelas.js"
+			],
+			[
+				"jurus",
+				"assets/js/proses/jurusan.js"
+			],
+			[
+				"prodi",
+				"assets/js/proses/prodi.js"
+			],
+			[
+				"peng",
+				"application/controllers/pengaturan.php"
+			],
+			[
+				"dosen",
+				"assets/js/proses/dosen.js"
+			],
+			[
+				"jad",
+				"assets/js/proses/jadwalmatakuliah.js"
+			],
+			[
 				"boot",
 				"assets/js/bootstrap-datepicker.js"
 			],
@@ -637,10 +747,6 @@
 			[
 				"mmata",
 				"application/models/mmatakuliah.php"
-			],
-			[
-				"ruangan",
-				"application/views/belakang/form/ruangan.php"
 			],
 			[
 				"side",
@@ -679,14 +785,6 @@
 				"application/models/mjurusan.php"
 			],
 			[
-				"jurus",
-				"assets/js/proses/jurusan.js"
-			],
-			[
-				"kelas",
-				"assets/js/proses/kelas.js"
-			],
-			[
 				"mke",
 				"application/models/mkelas.php"
 			],
@@ -711,10 +809,6 @@
 				"application/models/mjurusan.php"
 			],
 			[
-				"dosen",
-				"application/views/belakang/form/dosen.php"
-			],
-			[
 				"mjad",
 				"application/models/mjadwalmatakuliah.php"
 			],
@@ -729,10 +823,6 @@
 			[
 				"foote",
 				"jadwal-ypkp/application/views/belakang/footer.php"
-			],
-			[
-				"peng",
-				"jadwal-ypkp/application/controllers/pengaturan.php"
 			],
 			[
 				"view",
@@ -757,10 +847,6 @@
 			[
 				".sql",
 				"jadwal-ypkp/database/tabel.sql"
-			],
-			[
-				"prodi",
-				"jadwal-ypkp/assets/js/proses/prodi.js"
 			],
 			[
 				"footer",

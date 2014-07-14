@@ -98,7 +98,7 @@ CREATE TABLE `usb_kelas` (
 
 LOCK TABLES `usb_kelas` WRITE;
 /*!40000 ALTER TABLE `usb_kelas` DISABLE KEYS */;
-INSERT INTO `usb_kelas` VALUES ('1R','Tingkat 1 ','MI'),('2R','Tingkat 2 ','MI'),('3R','Tingkat 3 ','MI'),('4R','Tingkat 4 ','MI');
+INSERT INTO `usb_kelas` VALUES ('1TI1','1TI-1','TI'),('1TI2','1TI-2','TI'),('1TI3','1TI-3','TI'),('1TI4','1TI-4','TI'),('1TI5','1TI-5','TI'),('1TI6','1TI-6','TI'),('1TI7','1TI-7','TI'),('1TI8','1TI-8','TI'),('2TI1','2TI-1','TI'),('2TI2','2TI-2','TI'),('2TI3','2TI-3','TI'),('2TI4','2TI-4','TI'),('2TI5','2TI-5','TI'),('2TI6','2TI-6','TI'),('2TI7','2TI-7','TI'),('2TI8','2TI-8','TI');
 /*!40000 ALTER TABLE `usb_kelas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -298,7 +298,7 @@ CREATE TABLE `usb_prodi` (
 
 LOCK TABLES `usb_prodi` WRITE;
 /*!40000 ALTER TABLE `usb_prodi` DISABLE KEYS */;
-INSERT INTO `usb_prodi` VALUES ('AN','Adminstrasi Niaga'),('KA','Komputer Akuntansi'),('MI','Manajemen Informatika'),('TI','Teknik Informatika');
+INSERT INTO `usb_prodi` VALUES ('AN','Komputer Akuntansi'),('MI','Manajemen Informatika');
 /*!40000 ALTER TABLE `usb_prodi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -328,7 +328,7 @@ CREATE TABLE `usb_jadwalmatkul` (
 
 LOCK TABLES `usb_jadwalmatkul` WRITE;
 /*!40000 ALTER TABLE `usb_jadwalmatkul` DISABLE KEYS */;
-INSERT INTO `usb_jadwalmatkul` VALUES ('14070001',2014,'2R',1);
+INSERT INTO `usb_jadwalmatkul` VALUES ('14070001',2014,'1TI1',1);
 /*!40000 ALTER TABLE `usb_jadwalmatkul` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -391,7 +391,7 @@ CREATE TABLE `usb_ruangan` (
 
 LOCK TABLES `usb_ruangan` WRITE;
 /*!40000 ALTER TABLE `usb_ruangan` DISABLE KEYS */;
-INSERT INTO `usb_ruangan` VALUES ('R01','Ruang 1',40,'Ruang Teori','G1'),('R02','Ruang 2',25,'Lab. Komputer','G1');
+INSERT INTO `usb_ruangan` VALUES ('R01','Ruang 1',40,'Ruang Teori','G1'),('R02','Ruang 2',25,'Lab. Komputer','G1'),('R03','Labkom 1',30,'Lab. Komputer','G3');
 /*!40000 ALTER TABLE `usb_ruangan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -422,7 +422,7 @@ CREATE TABLE `usb_dosen` (
 
 LOCK TABLES `usb_dosen` WRITE;
 /*!40000 ALTER TABLE `usb_dosen` DISABLE KEYS */;
-INSERT INTO `usb_dosen` VALUES ('100001','roni','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100002','irawan','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100003','nurul','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100004','Nurul Arofah','kaprodi','s3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100005','Lukman Abdul Fatah, MSI','Ketua Jurusan','S2','Bandung','1980-06-01',22586543,2147483647,'Kiara Condong');
+INSERT INTO `usb_dosen` VALUES ('100001','Roni Irawan, S.T, M.T','kaprodi','S1','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100004','Nurul Arofah, S.T, M.M','kaprodi','S3','bandung','1990-07-07',2147483647,22589654,'Soreang'),('100005','Lukman Abdul Fatah, MSI','Ketua Jurusan','S2','Bandung','1980-06-01',22586543,2147483647,'Kiara Condong'),('100006','Irman Hariman, M.Kom','Dosen Luar Biasa','S2','Tasik','1979-08-08',2147483647,2147483647,'Jl. Kiaracondong No 78 Kiaracondong Bandung');
 /*!40000 ALTER TABLE `usb_dosen` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -447,7 +447,7 @@ CREATE TABLE `usb_matkul` (
 
 LOCK TABLES `usb_matkul` WRITE;
 /*!40000 ALTER TABLE `usb_matkul` DISABLE KEYS */;
-INSERT INTO `usb_matkul` VALUES ('A01','Data Mining',2),('A02','Database Sertifikasi',2),('A03','Jaringan Komputer',2),('A04','Pemrograman Web',4),('A05','Artifical Intelegense',4),('A06','Profdev',2);
+INSERT INTO `usb_matkul` VALUES ('A01','Data Mining',2),('A02','Database Sertifikasi',2),('A03','Jaringan Komputer',2),('A04','Pemrograman Web',4),('A05','Artifical Intelegense',4),('A06','Profdev',2),('A07','MPPL',2);
 /*!40000 ALTER TABLE `usb_matkul` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -495,7 +495,7 @@ CREATE TABLE `usb_lokasi` (
 
 LOCK TABLES `usb_lokasi` WRITE;
 /*!40000 ALTER TABLE `usb_lokasi` DISABLE KEYS */;
-INSERT INTO `usb_lokasi` VALUES ('G1','Gedung 1'),('G2','Gedung 2');
+INSERT INTO `usb_lokasi` VALUES ('G1','Gedung 1'),('G2','Gedung 2'),('G3','Gedung 3');
 /*!40000 ALTER TABLE `usb_lokasi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -523,7 +523,7 @@ CREATE TABLE `usb_jurusan` (
 
 LOCK TABLES `usb_jurusan` WRITE;
 /*!40000 ALTER TABLE `usb_jurusan` DISABLE KEYS */;
-INSERT INTO `usb_jurusan` VALUES ('KP','Komputer Perpajakan','3 Tahun','KA'),('MI','Manajemen Informatika','3 Tahun','MI'),('TI','Teknik Informatika','3 Tahun','TI');
+INSERT INTO `usb_jurusan` VALUES ('ADNIS','Administrasi Bisnis','3 Tahun','AN'),('AP','Aplikasi Perkantoran','1 Tahun','MI'),('IF','Teknik Informatika','4 Tahun','MI'),('KA','Komputer Akuntansi','3 Tahun','AN'),('KP','Komputer Perpajakan','3 Tahun','AN'),('KU','Komputer Keuangan','3 Tahun','AN'),('MI','Manajemen Informatika','3 Tahun','MI'),('SI','Sistem Informasi','4 Tahun','MI'),('TI','Teknik Informatika','3 Tahun','MI');
 /*!40000 ALTER TABLE `usb_jurusan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -581,4 +581,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-09 17:46:05
+-- Dump completed on 2014-07-14 20:49:14

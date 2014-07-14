@@ -37,7 +37,7 @@ $(document).ready(function() {
             },
             cache: false,
             success: function(){
-                
+                location.reload(true);
             }
         });
     });
@@ -56,7 +56,7 @@ $(document).ready(function() {
             },
             cache: false,
             success: function(){
-                
+                location.reload(true);
             }
         });
     });
@@ -72,7 +72,7 @@ $(document).ready(function() {
             },
             cache: false,
             success: function(){
-                
+                location.reload(true);
             }
         });
     });
