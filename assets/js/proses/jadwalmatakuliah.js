@@ -86,7 +86,16 @@ $(document).ready(function() {
         var tahun=$("#ttahun").val();
         var kdkelas=$("#tkelas").val();
         var kdsemester=$("#tsemester").val();
-        
+
+        var tdetail = $('#tblvjadwal').dataTable();
+        var vkode=$("#tkode").val();
+        var hari= tdetail.fnGetColumnData(0);
+        var matakuliah= tdetail.fnGetColumnData(1);
+        var sks= tdetail.fnGetColumnData(2);
+        var jam= tdetail.fnGetColumnData(3);
+        var ruangan= tdetail.fnGetColumnData(4);
+        var dosen= tdetail.fnGetColumnData(5);
+
         $.ajax({
             url: "simpanJadwalMatakuliah",
             type: "POST",
@@ -94,7 +103,10 @@ $(document).ready(function() {
                 kode:kode,
                 tahun:tahun,
                 kdkelas:kdkelas,
-                kdsemester:kdsemester
+                kdsemester:kdsemester,
+
+                vkode:vkode,
+                hari:hari
             },
             cache: false,
             success: function(){

@@ -21,6 +21,7 @@
     <!-- Coba library -->    
     <script src="<?php echo base_url('assets/js/bootstrap-datepicker.js');?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap-clockpicker.min.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/plugins/dataTables/fnGetColumnData.js');?>"></script>
 
     <script src="<?php echo base_url('assets/js/holder.js');?>"></script>    
     <script src="<?php echo base_url('assets/js/application.js');?>"></script>

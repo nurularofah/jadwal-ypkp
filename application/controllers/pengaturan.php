@@ -426,7 +426,9 @@ class Pengaturan extends CI_Controller {
 		$kode=$this->input->post('kode');
 		$tahun=$this->input->post('tahun');		
 		$kelas=$this->input->post('kdkelas');		
-		$semester=$this->input->post('kdsemester');		
+		$semester=$this->input->post('kdsemester');
+
+		$vkode=$this->input->post('vkode');		
 		
 		$dt=array(
 			'kd_head_jadwal' => $kode,
@@ -434,7 +436,14 @@ class Pengaturan extends CI_Controller {
 			'kd_kelas' => $kelas,
 			'kd_smstr' => $semester
 		);
+
 		$this->mjadwalmatakuliah->TambahJadwalMatakuliah($dt);
+
+		$vdt=array(
+			'kd_head_jadwal' => $vkode
+		);
+
+		$this->mjadwalmatakuliah->TambahJadwalMatakuliahDetail($vdt);
 	}
 }
 

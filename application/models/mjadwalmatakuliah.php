@@ -29,7 +29,12 @@ class Mjadwalmatakuliah extends CI_Model {
 
     function TambahJadwalMatakuliah($dta)
 	{
-		$this->db->insert('usb_jadwalmatkul', $dta);
+		$this->db->insert('usb_jadwalmatkul', $dta);		
+	}
+
+	function TambahJadwalMatakuliahDetail($vdt)
+	{
+		$this->db->insert('usb_detail_jadwalmatkul', $vdt);
 	}
 }
 
